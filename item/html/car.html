@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../css/car.css">
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../iconfont/iconfont.css">
+    <script src="../js/require.js" async ='true' defer data-main="../js/car"></script>
+    <title>购物车页面</title>
+</head>
+<body>
+    <div class="container">
+        <!-- 头部 -->
+        <header>
+            <div class="header">
+                <a href="">登录</a>
+                <a href="">返回首页</a> 
+            </div>
+        </header>
+        <section class="nav">
+            <img src="../images/pic-13 (1).jpg" alt="">
+        </section>
+        <!-- 表头 -->
+        <main>
+            <table>
+                <thead>
+                    <th>
+                        <input type="checkbox">
+                        商品</th>
+                    <th>规格</th>
+                    <th>单价</th>
+                    <th>数量</th>
+                    <th>金额</th>
+                    <th>操作</th>
+                </thead>
+            </table>
+            <!-- 加入商品列表 -->
+            <aside class="aside">
+               <!--  <div class="data">
+                    <input type="checkbox">
+                    <div class="img">
+                        <img src="../images/1.jpg" alt="">
+                    </div>
+                    <div class="font">
+                        <i>联想watch S 真皮表带 黑色</i>
+                    </div>
+                    <div class="blank">
+
+                    </div>
+                    <div class="price">
+                        <i>238.00</i>
+                    </div>
+                    <div class="counts">
+                        <aside>
+                             <a href="">-</a>
+                            <span>1</span>
+                            <a href="">+</a>
+                        </aside>
+                       
+                    </div>
+                    <div class="money">
+                        <i>238.00</i>
+                    </div>
+                    <div class="active">
+                            <a><i>删除</i>/<span>移入收藏夹</span></a>
+                    </div>
+                </div> -->   
+            </aside>
+            <!-- 结算块 -->
+            <div class="bottom">
+                <div class="left">
+                    <input type="checkbox">
+                    <span>全选</span>
+                    <a href="">删除选中商品</a>
+                </div>
+                <div class="right">
+                    <p>商品总价：<i>7587.00</i></p>
+                    <p>优惠节省：<i>0.00</i></p>
+                    <p>合计：<i>7587.00</i></p>
+                </div>
+            </div>
+            <div class="button">
+                <button>去结算</button>
+            </div>     
+            <!-- 底部轮播商品，json加载 --> 
+            <div class="banner">
+                <div class="top">
+                    <span></span>
+                    为您推荐
+                </div>
+                <div class="left-btn"><i class="iconfont">&#xe74a;</i></div>
+                <div class="right-btn"><i class="iconfont">&#xe634;</i></div>
+              <!--   <div class="foot">
+                    <dl>
+                        <dt>
+                            <img src="../images/1.jpg" alt="">
+                        </dt>
+                        <dd>拯救者 Y7000 2019高色域</dd>
+                        <dd>GTX 1660ti，高色域全面屏</dd>
+                        <dd>￥7099</dd>
+                    </dl>
+                    <dl>
+                        <dt>
+                            <img src="../images/2.jpg" alt="">
+                        </dt>
+                        <dd>拯救者 Y7000P 2019</dd>
+                        <dd>电竞全面屏</dd>
+                        <dd>￥6999</dd>
+                    </dl>
+                    <dl>
+                        <dt>
+                            <img src="../images/3.jpg" alt="">
+                        </dt>
+                        <dd>拯救者 Y7000P 2019</dd>
+                        <dd>电竞全面屏</dd>
+                        <dd>￥8299</dd>
+                    </dl>
+                    <dl>
+                        <dt>
+                            <img src="../images/4.jpg" alt="">
+                        </dt>
+                        <dd>拯救者 Y7000 2019高色域</dd>
+                        <dd>高色域全面屏</dd>
+                        <dd>￥6399</dd>
+                    </dl>
+                </div> -->
+            </div>
+        </main>
+         <!-- 底部 -->
+         <footer>
+                <div class="top">
+                    <img src="../images/footer_top.png" alt="">
+                </div>
+                <div class="bottom">
+                    <ul>
+                        <h2>购物指南</h2>
+                        <li><a href="">服务商信息</a></li>
+                        <li><a href="">购买流程</a></li>
+                        <li><a href="">注册登录</a></li>
+                    </ul>
+                    <ul>
+                        <h2>配送方式</h2>
+                        <li><a href="">配送方式</a></li>
+                        <li><a href="">配送方式信息</a></li>
+                        <li><a href="">签收原则</a></li>
+                        <li><a href="">物流查询</a></li>
+                    </ul>
+                    <ul>
+                        <h2>支付方式</h2>
+                        <li><a href="">分期支付</a></li>
+                        <li><a href="">支付方式</a></li>
+                        <li><a href="">支付问题</a></li>
+                    </ul>
+                    <ul>
+                        <h2>订单信息</h2>
+                        <li><a href="">订单信息</a></li>
+                        <li><a href="">发票信息</a></li>
+                        <li><a href="">支付问题</a></li>
+                    </ul>
+                    <ul>
+                        <h2>售后服务</h2>
+                        <li><a href="">售后服务总则</a></li>
+                        <li><a href="">24小时在线客服</a></li>
+                        <li><a href="">手机激活查询</a></li>
+                    </ul>
+                    <ul>
+                        <h2>其他说明</h2>
+                        <li><a href="">服务承诺</a></li>
+                        <li><a href="">账户安全</a></li>
+                        <li><a href="">手机产品购买须知</a></li>
+                        <li><a href="">环境信息</a></li>
+                    </ul>
+                    <div class="right">
+                        <h3>400-990-8888转1</h3>
+                        <em>周一到周日 9:00-21:00</em>
+                        <div>
+                            <i class="iconfont">&#xe605;</i>
+                            <span>在线咨询</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="foot">
+                    <ul>
+                        <li>版权所有： 1990-2019 联想集团</li>
+                        <li><a href="">法律公告</a></li>
+                        <li><a href="">隐私权政策</a></li>
+                        <li><a href="">产品安全</a></li>
+                    </ul>
+                    <ol>
+                        <li><a href="">京ICP备11035381</a></li>
+                        <li>京公网安备110108007970号</li>
+                        <li><a href="">营业执照：91110108700000458B</a></li>
+                    </ol>
+                </div>
+            </footer>
+    </div>
+</body>
+</html>

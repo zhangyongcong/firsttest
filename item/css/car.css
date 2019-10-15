@@ -1,0 +1,348 @@
+@charset "UTF-8";
+body {
+  _width: 1310px;
+  min-width: 1310px; }
+
+.container {
+  width: 1310px;
+  margin: 0 auto; }
+
+header {
+  width: 1310px;
+  background: black;
+  height: 38px; }
+  header .header {
+    width: 1200px;
+    margin: 0 auto;
+    height: 38px;
+    background: black; }
+    header .header a {
+      font-size: 13px;
+      float: right;
+      color: #fff;
+      margin-top: 10px;
+      padding: 0px 10px; }
+    header .header a:nth-of-type(2) {
+      border-right: 1px solid #fff; }
+
+.nav {
+  width: 1200px;
+  height: 90px;
+  margin: 0 auto;
+  line-height: 90px; }
+  .nav img {
+    width: 180px;
+    height: 30px; }
+
+main {
+  width: 1200px;
+  margin: 0 auto; }
+  main table:nth-of-type(1) {
+    width: 1200px; }
+    main table:nth-of-type(1) thead {
+      width: 1198px;
+      height: 37px;
+      background: #F8F8F8;
+      line-height: 37px;
+      border: 1px solid #ccc;
+      float: left; }
+      main table:nth-of-type(1) thead th {
+        font-size: 15px;
+        font-weight: 500;
+        width: 152px;
+        height: 37px;
+        margin: 0; }
+        main table:nth-of-type(1) thead th > input {
+          width: 14px;
+          height: 14px;
+          float: left;
+          margin: 12px 0px 0px 20px; }
+      main table:nth-of-type(1) thead th:nth-of-type(1) {
+        width: 462px;
+        height: 37px; }
+      main table:nth-of-type(1) thead th:nth-of-type(2) {
+        width: 164px;
+        height: 37px; }
+      main table:nth-of-type(1) thead th:nth-of-type(6) {
+        width: 118px;
+        height: 37px; }
+  main aside {
+    width: 1198px;
+    margin-top: 10px;
+    border: 1px solid #ccc; }
+    main aside .data {
+      width: 1200px;
+      height: 116px; }
+      main aside .data > input {
+        width: 14px;
+        float: left;
+        height: 14px;
+        margin: 52px 23px 0px 20px; }
+      main aside .data div {
+        float: left;
+        font-size: 14px;
+        height: 116px;
+        width: 152px;
+        text-align: center; }
+      main aside .data .img {
+        width: 148px; }
+        main aside .data .img img {
+          width: 115px;
+          height: 115px; }
+      main aside .data .font {
+        width: 257px;
+        line-height: 116px;
+        text-align: left; }
+      main aside .data .blank {
+        width: 163px; }
+      main aside .data .price {
+        line-height: 116px; }
+      main aside .data .counts aside {
+        width: 90px;
+        margin: 48px 0px 0px 30px;
+        height: 20px; }
+        main aside .data .counts aside > a {
+          display: inline-block;
+          width: 20px;
+          height: 20px;
+          background: #ccc;
+          float: left; }
+        main aside .data .counts aside span {
+          width: 50px;
+          height: 20px;
+          display: inline-block;
+          float: left; }
+      main aside .data .money {
+        line-height: 116px;
+        color: red; }
+      main aside .data .active {
+        line-height: 116px;
+        width: 117px; }
+        main aside .data .active > a i {
+          font-size: 14px;
+          margin: 0px 3px; }
+        main aside .data .active > a span {
+          font-size: 14px;
+          margin: 0px 3px; }
+  main .bottom {
+    width: 1168px;
+    margin-top: 10px;
+    height: 92px;
+    padding: 14px 15px;
+    border: 1px solid #ccc; }
+    main .bottom .left {
+      width: 1030px;
+      font-size: 13px;
+      height: 92px;
+      float: left; }
+      main .bottom .left > input {
+        width: 14px;
+        height: 14px; }
+      main .bottom .left span {
+        padding: 0px 5px; }
+      main .bottom .left > a {
+        margin-left: 10px; }
+    main .bottom .right {
+      width: 138px;
+      font-size: 16px;
+      height: 92px;
+      float: left; }
+      main .bottom .right > p:nth-of-type(3) {
+        margin-top: 13px; }
+        main .bottom .right > p:nth-of-type(3) i {
+          font-size: 18px;
+          color: red; }
+      main .bottom .right p:nth-of-type(2) {
+        margin-top: 13px; }
+  main .button {
+    width: 1200px;
+    height: 38px;
+    margin-top: 15px; }
+    main .button button {
+      width: 168px;
+      height: 38px;
+      border: none;
+      border-radius: 5px;
+      font-size: 20px;
+      color: #fff;
+      background: #E2231A;
+      float: right; }
+  main .banner {
+    margin-top: 95px;
+    width: 1198px;
+    border: 1px solid #ccc;
+    height: 370px;
+    position: relative;
+    overflow: hidden; }
+    main .banner .top {
+      width: 1198px;
+      font-size: 14px;
+      padding-top: 8px;
+      height: 32px;
+      border-bottom: 1px solid #ccc;
+      background: #ccc; }
+      main .banner .top span {
+        border: 1px solid red;
+        height: 14px;
+        margin: 0px 8px 0px 15px; }
+    main .banner .left-btn {
+      width: 50px;
+      height: 70px;
+      text-align: center;
+      line-height: 70px;
+      position: absolute;
+      top: 165px;
+      z-index: 3;
+      left: 5px; }
+      main .banner .left-btn .iconfont {
+        font-size: 40px; }
+      main .banner .left-btn:hover {
+        cursor: pointer; }
+    main .banner .right-btn {
+      width: 50px;
+      height: 70px;
+      text-align: center;
+      line-height: 70px;
+      position: absolute;
+      top: 165px;
+      z-index: 3;
+      right: 5px; }
+      main .banner .right-btn .iconfont {
+        font-size: 40px; }
+      main .banner .right-btn:hover {
+        cursor: pointer; }
+    main .banner .foot {
+      width: 984px;
+      margin: 0px auto;
+      padding: 15px 0px;
+      height: 300px; }
+      main .banner .foot dl {
+        width: 216px;
+        float: left;
+        padding: 15px;
+        margin-top: 5px;
+        text-align: center; }
+        main .banner .foot dl dt {
+          width: 216px;
+          height: 216px; }
+          main .banner .foot dl dt img {
+            width: 100%;
+            height: 100%; }
+        main .banner .foot dl dd {
+          font-size: 13px; }
+        main .banner .foot dl dd:nth-of-type(3) {
+          color: red; }
+
+/* 底部 */
+footer {
+  height: 42px; }
+
+footer .top {
+  width: 1310px;
+  height: 199px; }
+
+footer .top img {
+  width: 100%;
+  height: 100%; }
+
+footer .bottom {
+  padding: 44px 0px 0px 100px;
+  height: 145px;
+  background: #f5f5f5; }
+
+footer .bottom ul {
+  width: 150px;
+  height: 145px;
+  float: left; }
+
+footer .bottom ul h2 {
+  font-size: 16px;
+  margin-bottom: 5px; }
+
+footer .bottom ul li a {
+  font-size: 12px;
+  color: #666; }
+
+footer .bottom .right {
+  width: 230px;
+  height: 90px;
+  margin-left: 10px;
+  padding-left: 68px;
+  border-left: 1px solid #666;
+  float: left; }
+
+footer .bottom .right h3 {
+  font-size: 20px;
+  color: red; }
+
+footer .bottom .right em {
+  display: block;
+  font-size: 12px;
+  color: #666; }
+
+footer .bottom .right div {
+  width: 136px;
+  height: 34px;
+  border: 1px solid #666;
+  text-align: center;
+  line-height: 34px; }
+
+footer .bottom .right div .iconfont {
+  font-size: 20px;
+  color: #666; }
+
+footer .bottom .right div span {
+  font-size: 20px;
+  color: #666; }
+
+footer .foot {
+  width: 1310px;
+  height: 46px;
+  background: #757575; }
+
+footer .foot ul {
+  float: left;
+  height: 46px;
+  width: 600px; }
+
+footer .foot ul li {
+  float: left;
+  color: #ccc;
+  font-size: 12px;
+  margin-top: 10px; }
+
+footer .foot ul li:nth-of-type(1) {
+  padding-right: 5px; }
+
+footer .foot ul li a {
+  display: block;
+  height: 22px;
+  border-left: 1px solid #ccc;
+  color: #ccc;
+  padding: 0px 5px; }
+
+footer .foot ol {
+  float: left;
+  width: 710px;
+  height: 46px; }
+
+footer .foot ol li {
+  float: left;
+  color: #ccc;
+  font-size: 12px;
+  margin-top: 10px; }
+
+footer .foot ol li a {
+  display: block;
+  height: 22px;
+  color: #ccc;
+  padding: 0px 5px; }
+
+footer .foot ol li:nth-of-type(1) a {
+  border-right: 1px solid #ccc; }
+
+footer .foot ol li:nth-of-type(3) a {
+  border-left: 1px solid #ccc; }
+
+footer .foot ol li:nth-of-type(2) {
+  padding: 0px 5px; }

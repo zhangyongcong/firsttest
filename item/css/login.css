@@ -1,0 +1,517 @@
+@charset "UTF-8";
+body {
+  min-width: 1310px;
+  _width: 1310px; }
+
+.container {
+  margin: 0 auto;
+  width: 1310px; }
+
+.head {
+  height: 50px;
+  width: 1310px; }
+
+/* 图标 */
+.head .head_nav {
+  width: 50px;
+  height: 50px;
+  float: left; }
+
+.head .head_nav img {
+  width: 100%;
+  height: 100%; }
+
+/* 头部导航 */
+.head header {
+  width: 1260px;
+  height: 50px;
+  float: left; }
+
+.head header ul li {
+  height: 50px;
+  line-height: 50px;
+  font-size: 14px;
+  margin-right: 22px;
+  float: left; }
+
+.head header ul li:nth-of-type(1) {
+  margin-left: 5px; }
+
+.head header ul li a {
+  color: #ccc;
+  margin-top: 15px; }
+
+/* 中间部分 */
+main {
+  height: 588px;
+  width: 1310px;
+  background: url("../images/bg.jpg") no-repeat;
+  background-position: -370px 0px; }
+
+main > a {
+  width: 750px;
+  height: 525px;
+  display: block;
+  float: left; }
+
+/* 账号密码登录页 */
+main section {
+  width: 460px;
+  height: 525px;
+  background: white;
+  float: right;
+  margin: 32px 21px 0px 0px; }
+
+main section .top span {
+  font-size: 24px;
+  display: block;
+  float: left;
+  font-weight: 900;
+  padding: 33px 0px 36px 36px; }
+
+/* 提示框三角 */
+main section .top .sin {
+  position: relative; }
+
+main section .top .sin em {
+  width: 0px;
+  height: 0px;
+  display: block;
+  border: solid #fff;
+  overflow: hidden;
+  border-left-color: orange;
+  border-width: 6px 0px 6px 6px;
+  position: absolute;
+  top: 26px;
+  left: 378px; }
+
+main section .top .sin strong {
+  width: 0px;
+  height: 0px;
+  display: block;
+  border: solid #fff;
+  border-left-color: orange;
+  border-width: 6px 0px 5px 5px;
+  position: absolute;
+  overflow: hidden;
+  top: 26px;
+  left: 378px; }
+
+/* 提示框 */
+main section .top .dia_box {
+  width: 172px;
+  height: 30px;
+  border: 1px solid orange;
+  float: left;
+  padding-top: 3px;
+  margin: 15px 0px 0px 25px; }
+
+main section .top .dia_box i {
+  font-size: 12px;
+  padding: 3px 5px 5px 5px; }
+
+main section .top .dia_box img {
+  width: 14px;
+  height: 14px;
+  margin-right: 3px; }
+
+/* 右上二维码图标 */
+main section .top #e_icon {
+  width: 60px;
+  height: 60px;
+  background: url("../images/e_icon.png") no-repeat;
+  background-size: contain;
+  background-position: right top;
+  margin: 8px 8px 0px 0px;
+  float: right; }
+
+main section .top #e_icon:hover {
+  cursor: pointer; }
+
+main section .content {
+  margin: 0 auto;
+  width: 348px; }
+
+/* 输入框 */
+main section .content input {
+  width: 348px;
+  height: 50px;
+  padding-left: 14px;
+  margin-bottom: 10px;
+  border: none;
+  border: 1px solid #999; }
+
+/* 登录按钮 */
+main section .content #submit {
+  width: 348px;
+  height: 50px;
+  border: none;
+  background: red; }
+
+/* 登录是否成功警告框 */
+main section .alert {
+  margin: 2px 2px 10px;
+  padding: 2px;
+  text-align: center;
+  display: none; }
+
+main section .content #news {
+  font-size: 14px;
+  float: left;
+  margin-top: 15px; }
+
+main section .content #news:hover {
+  color: red;
+  cursor: pointer; }
+
+main section .content .register {
+  float: right;
+  margin-top: 15px; }
+
+main section .content .register a {
+  font-size: 12px; }
+
+main section .content .register a:nth-of-type(1) {
+  margin-right: 4px; }
+
+main section .content .register a:nth-of-type(2) {
+  margin-left: 4px; }
+
+main section .content .register a:hover {
+  color: red;
+  text-decoration: none;
+  cursor: pointer; }
+
+/* 下方图标 */
+main section .foot {
+  height: 90px;
+  width: 358px;
+  margin: 130px auto 0px; }
+
+main section .foot fieldset {
+  border: none;
+  border-top: 1px solid #999; }
+
+main section .foot fieldset legend {
+  padding: 0px 5px; }
+
+main section .icon {
+  padding: 15px 45px 0px; }
+
+main section .icon .iconfont {
+  font-size: 31px;
+  margin: 0px 15px; }
+
+main section .icon .iconfont:hover {
+  color: #51c6e4;
+  cursor: pointer; }
+
+main section .icon .iconfont:nth-of-type(2):hover {
+  color: red;
+  cursor: pointer; }
+
+main section .icon .iconfont:nth-of-type(3):hover {
+  color: #1cd11c;
+  cursor: pointer; }
+
+/* 二维码页 */
+aside {
+  width: 460px;
+  height: 525px;
+  background: white;
+  float: right;
+  margin: 32px 21px 0px 0px;
+  display: none; }
+
+main aside .top span {
+  font-size: 24px;
+  display: block;
+  float: left;
+  font-weight: 900;
+  padding: 33px 0px 36px 36px; }
+
+/* 右上PC图标 */
+main aside .top #co_icon {
+  width: 60px;
+  height: 60px;
+  background: url("../images/co_icon.png") no-repeat;
+  background-size: contain;
+  background-position: right top;
+  margin: 8px 8px 0px 0px;
+  float: right; }
+
+main aside .top #co_icon:hover {
+  cursor: pointer; }
+
+main aside .content {
+  width: 330px;
+  height: 210px;
+  margin: 150px auto 0px; }
+
+/* 二维码 */
+main aside .content img {
+  width: 210px;
+  height: 210px;
+  margin-left: 60px; }
+
+/* 下方提示信息 */
+main aside > p {
+  text-align: center;
+  font-size: 14px; }
+
+main aside > p > span {
+  font-weight: 900;
+  margin: 0px 5px; }
+
+/* 短信快捷登录 */
+main article {
+  width: 460px;
+  height: 525px;
+  background: white;
+  float: right;
+  margin: 32px 21px 0px 0px;
+  display: none; }
+
+main article .top span {
+  font-size: 24px;
+  display: block;
+  float: left;
+  font-weight: 900;
+  padding: 33px 0px 36px 36px; }
+
+/* 提示框三角 */
+main article .top .sin {
+  position: relative; }
+
+main article .top .sin em {
+  width: 0px;
+  height: 0px;
+  display: block;
+  border: solid #fff;
+  overflow: hidden;
+  border-left-color: orange;
+  border-width: 6px 0px 6px 6px;
+  position: absolute;
+  top: 26px;
+  left: 378px; }
+
+main article .top .sin strong {
+  width: 0px;
+  height: 0px;
+  display: block;
+  border: solid #fff;
+  border-left-color: orange;
+  border-width: 6px 0px 5px 5px;
+  position: absolute;
+  overflow: hidden;
+  top: 26px;
+  left: 378px; }
+
+/* 提示框 */
+main article .top .dia_box {
+  width: 172px;
+  height: 30px;
+  border: 1px solid orange;
+  float: left;
+  padding-top: 3px;
+  margin: 15px 0px 0px 25px; }
+
+main article .top .dia_box i {
+  font-size: 12px;
+  padding: 3px 5px 5px 5px; }
+
+main article .top .dia_box img {
+  width: 14px;
+  height: 14px;
+  margin-right: 3px; }
+
+/* 右上二维码图标 */
+main article .top #e_icon1 {
+  width: 60px;
+  height: 60px;
+  background: url("../images/e_icon.png") no-repeat;
+  background-size: contain;
+  background-position: right top;
+  margin: 8px 8px 0px 0px;
+  float: right; }
+
+main article .top #e_icon1:hover {
+  cursor: pointer; }
+
+main article .content {
+  margin: 0 auto;
+  width: 348px; }
+
+/* 输入框 */
+main article .content input {
+  width: 348px;
+  height: 50px;
+  padding-left: 14px;
+  margin-bottom: 10px;
+  border: none;
+  border: 1px solid #999; }
+
+main article .content div:nth-of-type(1) {
+  width: 352px;
+  height: 52px;
+  overflow: hidden;
+  margin-bottom: 10px;
+  border: 1px solid #999;
+  padding-left: 10px; }
+
+main article .content div:nth-of-type(1) #input4 {
+  width: 238px;
+  float: left;
+  margin: 0;
+  padding-left: 10px;
+  padding: 0;
+  border: 0; }
+
+main article .content div:nth-of-type(1) #input5 {
+  width: 113px;
+  height: 53px;
+  border: none;
+  margin: 0;
+  padding: 0;
+  float: left; }
+
+/* 登录按钮 */
+main article .content #submit1 {
+  width: 348px;
+  height: 50px;
+  border: none;
+  background: red; }
+
+/* 登录是否成功警告框 */
+main article .alert {
+  margin: 2px 2px 10px;
+  padding: 2px;
+  text-align: center;
+  display: none; }
+
+main article .content #user {
+  font-size: 14px;
+  float: left;
+  margin-top: 15px; }
+
+main article .content #user:hover {
+  color: red;
+  cursor: pointer; }
+
+main article .content .register {
+  float: right;
+  margin-top: 15px; }
+
+main article .content .register a {
+  font-size: 12px; }
+
+main article .content .register a:nth-of-type(1) {
+  margin-right: 4px; }
+
+main article .content .register a:nth-of-type(2) {
+  margin-left: 4px; }
+
+main article .content .register a:hover {
+  color: red;
+  text-decoration: none;
+  cursor: pointer; }
+
+/* 下方图标 */
+main article .foot {
+  height: 90px;
+  width: 358px;
+  margin: 130px auto 0px; }
+
+main article .foot fieldset {
+  border: none;
+  border-top: 1px solid #999; }
+
+main article .foot fieldset legend {
+  padding: 0px 5px; }
+
+main article .icon {
+  padding: 15px 45px 0px; }
+
+main article .icon .iconfont {
+  font-size: 31px;
+  margin: 0px 15px; }
+
+main article .icon .iconfont:hover {
+  color: #51c6e4;
+  cursor: pointer; }
+
+main article .icon .iconfont:nth-of-type(2):hover {
+  color: red;
+  cursor: pointer; }
+
+main article .icon .iconfont:nth-of-type(3):hover {
+  color: #1cd11c;
+  cursor: pointer; }
+
+/* 二维码页2 */
+aside {
+  width: 460px;
+  height: 525px;
+  background: white;
+  float: right;
+  margin: 32px 21px 0px 0px;
+  display: none; }
+
+main aside .top span {
+  font-size: 24px;
+  display: block;
+  float: left;
+  font-weight: 900;
+  padding: 33px 0px 36px 36px; }
+
+/* 右上PC图标 */
+main aside .top #co_icon1 {
+  width: 60px;
+  height: 60px;
+  background: url("../images/co_icon.png") no-repeat;
+  background-size: contain;
+  background-position: right top;
+  margin: 8px 8px 0px 0px;
+  float: right; }
+
+main aside .top #co_icon1:hover {
+  cursor: pointer; }
+
+main aside .content {
+  width: 330px;
+  height: 210px;
+  margin: 150px auto 0px; }
+
+/* 二维码 */
+main aside .content img {
+  width: 210px;
+  height: 210px;
+  margin-left: 60px; }
+
+/* 下方提示信息 */
+main aside > p {
+  text-align: center;
+  font-size: 14px; }
+
+main aside > p > span {
+  font-weight: 900;
+  margin: 0px 5px; }
+
+/* 底部 */
+footer {
+  height: 85px;
+  width: 1310px;
+  padding-top: 55px;
+  font-size: 14px; }
+
+footer p {
+  text-align: center; }
+
+footer p:nth-of-type(1) {
+  margin-bottom: 17px; }
+
+footer p i:hover {
+  cursor: pointer; }
+
+footer p span:hover {
+  cursor: pointer; }
