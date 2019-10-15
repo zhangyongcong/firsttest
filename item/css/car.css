@@ -136,7 +136,7 @@ main {
     padding: 14px 15px;
     border: 1px solid #ccc; }
     main .bottom .left {
-      width: 1030px;
+      width: 1018px;
       font-size: 13px;
       height: 92px;
       float: left; }
@@ -148,7 +148,7 @@ main {
       main .bottom .left > a {
         margin-left: 10px; }
     main .bottom .right {
-      width: 138px;
+      width: 150px;
       font-size: 16px;
       height: 92px;
       float: left; }

@@ -165,9 +165,16 @@ define(['jquery','jquery-cookie',"parabola"],function($){
                 goodObj.num++;
                 // console.log(goodObj.num)
             }else{
-                    if(goodObj.num == 1){
-                    alert("数量已经最小了！");
-                    // goodObj.num == 1;
+                if(goodObj.num == 1){
+                    // 当数量小于1时删除
+                    var id = $(this).closest('.data').remove().attr('id');
+                    var cookieArr = JSON.parse($.cookie("goods"));
+                    for(var i = 0; i < cookieArr.length; i++){
+                        if(id == cookieArr[i].id){
+                            cookieArr.splice(i, 1);
+                            break;
+                        }
+                    }
                 }else{
                     goodObj.num--;
                 }
@@ -190,8 +197,28 @@ define(['jquery','jquery-cookie',"parabola"],function($){
             sc_num();
     
         })
+
+
+        // 合计
+        $('main .aside').on("click",".data input",function(){
+            // var id  =  $(this).parent().attr('id');
+            // alert(id);
+            var money = parseInt($(this).parent().find('.money').find('i').html());
+            // alert(money);
+            var num = parseInt($(this).parent().parent().next().find('.right').find('.p1').find('i').html());
+            // alert(num);
+            var isChecked = $(this).prop('checked');
+            if(isChecked == true){
+              var num = num += money;
+              $(this).parent().parent().next().find('.right').find('.p1').find('i').html(num+'.00');
+              $(this).parent().parent().next().find('.right').find('.p2').find('i').html(num+'.00');
+            }else{
+              var num = num -= money;
+              $(this).parent().parent().next().find('.right').find('.p1').find('i').html(num+'.00');
+              $(this).parent().parent().next().find('.right').find('.p2').find('i').html(num+'.00');
+            } 
+        })
     }
-    
                 // 统计购物车中的商品数量
                 function sc_num(){
                     var cookieStr = $.cookie("goods");
@@ -207,7 +234,7 @@ define(['jquery','jquery-cookie',"parabola"],function($){
                     }
                 }
                 function sc_msg(){
-                    // $('main .aside').empty();//清空所有的子节点
+                    // $('main .data').empty();//清空所有的子节点
                     $.ajax({
                         type:'get',
                         url:'../data/goods.json',
@@ -265,9 +292,9 @@ define(['jquery','jquery-cookie',"parabola"],function($){
                                 <a href="">删除选中商品</a>
                             </div>
                             <div class="right">
-                                <p>商品总价：<i>7890.00</i></p>
+                                <p class="p1">商品总价：<i>0.00</i></p>
                                 <p>优惠节省：<i>0.00</i></p>
-                                <p>合计：<i>7890.00</i></p>
+                                <p class="p2">合计：<i>0.00</i></p>
                             </div>
                         </div>`).appendTo('main .bottom')
                             }
@@ -277,6 +304,26 @@ define(['jquery','jquery-cookie',"parabola"],function($){
                         }
                     })
     }
+
+    // 合计
+    /* $('main .aside').on("click",".data input",function(){
+        // var id  =  $(this).parent().attr('id');
+        // alert(id);
+        var money = parseInt($(this).parent().find('.money').find('i').html());
+        // alert(money);
+        var num = parseInt($(this).parent().parent().next().find('.right').find('.p1').find('i').html());
+        // alert(num);
+        var isChecked = $(this).prop('checked');
+        if(isChecked == true){
+          var num = num += money;
+          $(this).parent().parent().next().find('.right').find('.p1').find('i').html(num);
+        }else{
+          var num = num -= money;
+          $(this).parent().parent().next().find('.right').find('.p1').find('i').html(num);
+        }
+        // sc_num();
+
+    }) */
     return {
         download:download,
         banner:banner,

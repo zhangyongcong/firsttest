@@ -214,7 +214,7 @@ function add(){
            $.cookie('goods',null); 
         }
         sc_num();
-        ballMove(this);
+        // ballMove(this);
 })
         //加和减
         $("main section article").on("click", ".bottom .count1 #count i", function(){
