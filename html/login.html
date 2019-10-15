@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>登录</title>
+    <link rel="stylesheet" href="../iconfont1/iconfont.css">
+    <link rel="stylesheet" href="../css/login.css">
+    <link rel="stylesheet" href="../css/reset.css">
+    <script src="../js/jquery-1.10.1.min.js"></script>
+    <script src="../js/ajax.js"></script>
+    <script src="../js/login.js"></script>
+    <script src="../js/reset.js"></script>
+</head>
+<body>
+    <div class="container">
+        <!-- 头部导航 -->
+        <div class="head">
+            <!-- 图标 -->
+            <div class="head_nav">
+                <img src="../images/head_nav.jpg" alt="">
+            </div>
+            <!-- 导航 -->
+            <header>
+                <ul>
+                    <li><a href="">联想首页</a></li>
+                    <li><a href="">商城</a></li>
+                    <li><a href="">社区</a></li>
+                    <li><a href="">服务</a></li>
+                    <li><a href="">资讯</a></li>
+                    <li><a href="">门店</a></li>
+                    <li><a href="">手机版</a></li>
+                </ul>
+            </header>
+        </div>
+        <!-- 中间部分 -->
+        <main>
+            <a href=""></a>
+            <!-- 账号密码登录页 -->
+            <section id="pc_login">
+                <div class="top">
+                    <span>联想会员登录</span>
+                    <!-- 提示框三角 -->
+                    <div class="sin">
+                        <em></em>
+                        <strong></strong>
+                    </div>
+                    <!-- 提示框 -->
+                    <div class="dia_box">
+                        <i>
+                            <img src="../images/con_icon.png" alt="">扫码登录更安全
+                        </i>
+                    </div>
+                    <!-- 右上二维码图标 -->
+                    <p id="e_icon"></p>
+                </div>
+                <!-- 中间输入框+登录按钮 -->
+                <div class="content">
+                    <input type="text" placeholder="手机号码/邮箱" id="input1">
+                    <input type="password" placeholder="密码" id="input2">
+                    <!-- 登录是否成功提示信息 -->
+                    <div class="alert"></div>
+                    <button id="submit">登录</button>
+                    <p id="news">手机验证码快捷登录</p>
+                    <p class="register"><a href="register.html">立即注册</a>|<a href="repassword.html">忘记密码？</a></p>
+                </div>
+                <!-- 下方图标 -->
+                <div class="foot">
+                    <fieldset>
+                        <legend align="center">其他登录方式</legend>
+                    </fieldset>
+                    <div class="icon">
+                        <i class="iconfont">&#xe66a;</i>
+                        <i class="iconfont">&#xe6b2;</i>
+                        <i class="iconfont">&#xe611;</i>
+                        <i class="iconfont">&#xe665;</i>
+                    </div>
+                </div>
+            </section>
+            <!-- 二维码登录页 -->
+            <aside id="phone_login">
+                <div class="top">
+                    <span>联想会员扫码登录</span>
+                    <!-- 右上PC图标 -->
+                    <p id="co_icon"></p>
+                </div>
+                <!-- 二维码 -->
+                <div class="content">
+                    <img src="../images/show.gif" alt="">
+                </div>
+                <!-- 下方提示信息 -->
+                <p>
+                    打开
+                    <span>微信</span>
+                    扫码登录
+                </p>
+            </aside>
+            <!-- 短信快捷登录 -->
+            <article id="news_login">
+                <div class="top">
+                    <span>联想会员登录</span>
+                    <!-- 提示框三角 -->
+                    <div class="sin">
+                        <em></em>
+                        <strong></strong>
+                    </div>
+                    <!-- 提示框 -->
+                    <div class="dia_box">
+                        <i>
+                            <img src="../images/con_icon.png" alt="">扫码登录更安全
+                        </i>
+                    </div>
+                    <!-- 右上二维码图标 -->
+                    <p id="e_icon1"></p>
+                </div>
+                <!-- 中间输入框+登录按钮 -->
+                <div class="content">
+                    <input type="text" placeholder="手机号码" id="input3">
+                    <div>
+                         <input type="text" placeholder="短信验证" id="input4">
+                        <input type="button" value="获取验证码" id="input5">
+                    </div>
+                   
+                    <!-- 登录是否成功提示信息 -->
+                    <div class="alert"></div>
+                    <button id="submit1">登录</button>
+                    <p id="user">用户名密码登录</p>
+                    <p class="register"><a href="register.html">立即注册</a>|<a href="repassword.html">忘记密码？</a></p>
+                </div>
+                <!-- 下方图标 -->
+                <div class="foot">
+                    <fieldset>
+                        <legend align="center">其他登录方式</legend>
+                    </fieldset>
+                    <div class="icon">
+                        <i class="iconfont">&#xe66a;</i>
+                        <i class="iconfont">&#xe610;</i>
+                        <i class="iconfont">&#xe6b1;</i>
+                        <i class="iconfont">&#xe63b;</i>
+                    </div>
+                </div>
+            </article>
+
+            <!-- 二维码登录页2 -->
+            <aside id="phone_login1">
+                <div class="top">
+                    <span>联想会员扫码登录</span>
+                    <!-- 右上PC图标 -->
+                    <p id="co_icon1"></p>
+                </div>
+                <!-- 二维码 -->
+                <div class="content">
+                    <img src="../images/show.gif" alt="">
+                </div>
+                <!-- 下方提示信息 -->
+                <p>
+                    打开
+                    <span>微信</span>
+                    扫码登录
+                </p>
+            </aside>
+        </main>
+        <footer>
+            <p>版权所有：1990-2019 联想集团|<a href="notice.html">法律公告</a>|<a href="conceal.html">隐私权政策</a></p>
+            <p>京ICP备11035381|京公网安备110108007970号|营业执照：110000410127232</p>
+        </footer>
+    </div>
+</body>
+</html>

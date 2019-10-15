@@ -69,10 +69,13 @@ main {
   main aside {
     width: 1198px;
     margin-top: 10px;
-    border: 1px solid #ccc; }
+    border: 1px solid #ccc;
+    border-bottom: none; }
     main aside .data {
       width: 1200px;
-      height: 116px; }
+      height: 116px;
+      padding-bottom: 5px;
+      border-bottom: 1px solid #ccc; }
       main aside .data > input {
         width: 14px;
         float: left;
@@ -91,8 +94,9 @@ main {
           height: 115px; }
       main aside .data .font {
         width: 257px;
-        line-height: 116px;
-        text-align: left; }
+        height: 84px;
+        text-align: left;
+        padding-top: 32px; }
       main aside .data .blank {
         width: 163px; }
       main aside .data .price {
@@ -100,8 +104,9 @@ main {
       main aside .data .counts aside {
         width: 90px;
         margin: 48px 0px 0px 30px;
-        height: 20px; }
-        main aside .data .counts aside > a {
+        height: 20px;
+        border: 1px solid #ccc; }
+        main aside .data .counts aside > i {
           display: inline-block;
           width: 20px;
           height: 20px;

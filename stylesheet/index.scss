@@ -1,0 +1,705 @@
+body{
+    min-width: 1310px;
+    _width:1310px;
+}
+#ball{
+    width:30px;
+    height:30px;
+    background: black;
+    position: absolute;
+    border-radius: 50%;
+    display: none;
+}
+.container{
+    margin:0 auto;
+    width:1310px;
+    position: relative;
+}
+.right_lan>dl:last-child{
+    height:20px;
+    padding:0;
+    text-align: center;
+    line-height: 15px;
+}
+.right_lan>dl:last-child dd{
+    height:0;
+}
+.right_lan>dl:last-child dt{
+    width:50px;
+    height:20px;
+    background:#666;
+    .iconfont{
+        font-size:30px;
+        color:#fff;
+    }
+}
+.right_lan>dl:last-child:hover{
+    cursor: pointer;
+}
+.right_lan>dl:last-child dt .iconfont:hover{
+    color:#fff;
+}
+.right_lan{
+    position: fixed;
+    top:30%;
+    right: 0;
+    z-index: 5;
+    border:1px solid #666;
+    border-bottom: none;
+    display: none;
+ dl{
+    width:50px;
+    height:43px;
+    padding-top:6px;
+    text-align: center; 
+    border-bottom:1px solid #666;
+    background: #fff;
+    dt .iconfont{
+        font-size:18px;
+        &:hover{
+            color: red;
+        }
+    }
+    &:hover{
+        cursor: pointer;
+        color: red;
+    }
+    dd{
+        font-size:12px;
+    }
+}
+}
+.head_nav1{
+    position: fixed;
+    top:0;
+    width:70px;
+    height: 70px;
+    z-index: 6;
+}
+.head{
+    height: 50px;
+    width:1310px;
+
+.head_nav{/* 图标 */
+    width:50px;
+    height:50px;
+    float: left;
+    position: relative;
+
+img{
+    width:100%;
+    height: 100%;
+}
+}
+header{/* 头部导航 */
+    width:1260px;
+    height:50px;
+    float: left;
+ul li{
+    height: 50px;
+    line-height: 50px;  
+    margin-right: 22px;
+    float: left;
+}
+}
+}
+.head header>ul li:nth-of-type(1){
+    margin-left:5px;
+}
+.head header>ul li>a{
+    color: #ccc;
+    margin-top:15px;
+    font-size: 14px;
+}
+/* 登录注册 */
+.head header>p{
+    float:right;
+    font-size:14px;
+    height:40px;
+    padding-top:10px;
+}
+.head header>p>a{
+    display: block;
+    height:20px;
+    float: left;
+    padding:0 10px;
+    .iconfont{
+        margin:0px 5px;
+    }
+    span{
+        padding: 0px 3px;
+        color:red;
+    }
+}
+.head header>p>a:nth-of-type(1){
+    border-right:1px solid #ccc;
+}
+/* 导航 */
+.nav{
+    width:1310px;
+    margin:0 auto;
+    height:70px;
+    background:#999;
+    position: relative;
+}
+.nav1{
+    width:1280px;
+    position: fixed;
+    top:0;
+    z-index: 5;
+    padding-left: 30px;
+}
+.nav>ol{
+    height:70px;
+    width:1240px;
+    font-size: 17px;
+    line-height: 70px;
+    padding-left:70px;
+}
+.nav>ol li{
+    float:left;
+    margin-right:45px;
+}
+/* banner图 */
+.banner{
+    height:406px;
+    position: relative;
+    overflow: hidden;
+    width:1310px;
+    z-index: 2;
+}
+.banner section{
+    position: relative;
+    top:0;
+    left:0;  
+    bottom:0;
+    right:0;
+    margin:0 auto;  
+}
+.banner section a{
+    display: block;
+    position: relative;
+    float: left;
+   left:50%;
+   height:406px;
+}
+.banner section a img{
+   position: relative;
+   float: left;
+   height:406px;
+   left:-50%;
+}
+.banner ol{
+   position: absolute;
+   top:380px;
+   right:0px;
+   bottom: 0px;
+   left:50%;
+   z-index: 2;
+}
+.banner ol li{
+   width:10px;
+   height:10px;
+   margin:5px;
+   border-radius: 50%;
+   background: #fff;
+   float: left;
+}
+.banner .active{
+   width:13px;
+   height:13px;
+   margin:4px 5px;
+   border-radius: 50%;
+   background:red;
+   float: left;
+}
+.banner_l{
+    width:1310px;
+    position: absolute;
+    height:404px;
+    top:120px;
+}
+.banner_l .left-btn{
+    width:50px;
+    height:70px;
+    text-align: center;
+    line-height: 70px;
+    background: rgba(2,2,2,.3);
+    position: absolute;
+    top:170px;
+    z-index: 3;
+    left:5px;
+    display: none;
+}
+.banner_l .left-btn .iconfont{
+    font-size: 40px;
+    color: #fff;
+}
+.banner_l .left-btn:hover{
+    cursor: pointer;
+}
+.banner_l .right-btn:hover{
+    cursor: pointer;
+}
+.banner_l .right-btn{
+    width:50px;
+    height:70px;
+    text-align: center;
+    line-height: 70px;
+    background: rgba(2,2,2,.3);
+    position: absolute;
+    top:170px;
+    z-index: 3;
+    right:0;
+    display: none;
+}
+.banner_l .right-btn .iconfont{
+    font-size: 40px;
+    color: #fff;
+}
+.banner_l .banner_left{
+    width:188px;
+    height: 404px;
+    background:rgba(245,245,245,0.6);
+    position: relative;
+    left:55px;
+    z-index: 3;
+    border:1px solid #ccc;
+}
+.banner_l .banner_left>ul{
+    width:188px;
+    height:58px;
+}
+.banner_l .banner_left>ul>li>a{
+    display: block;
+    width:159px;
+    height:57px;
+    padding:0px 15px;
+    line-height: 58px;
+    border-bottom:1px solid #ccc;
+    font-size: 18px;
+}
+/* .banner_l .banner_left>ul li{
+    position: relative;
+} */
+.banner_l .banner_left>ul li a .iconfont{
+    font-size: 18px;
+    float: right;
+}
+.banner_l .banner_left>ul li:last-child a{
+    border-bottom:0;
+}
+.banner_l .banner_left>ul li .right_block{
+    position: absolute;
+    top:-1px;
+    left:185px;
+    width:1050px;
+    height:366px;
+    z-index: 4;
+    background:#fff;
+    display: none;
+    padding:20px 10px;
+}
+.banner_l .banner_left > ul > li .right_block > section {
+    width: 800px;
+    height: 366px;
+    float: left; 
+}
+  
+.banner_l .banner_left > ul > li .right_block > section > ol {
+    display: block;
+    width: 800px;
+    padding: 20px; 
+}
+  .banner_l .banner_left > ul > li .right_block > section > ol > li {
+    margin: 5px 0px;
+    float: left; }
+  
+  .banner_l .banner_left > ul > li .right_block > section > ol > li a {
+    padding: 3px 10px;
+    display: inline-block;
+    line-height: 12px;
+    height: 12px;
+    border-left: 1px solid #757575;
+    font-size: 14px; }
+  
+  .banner_l .banner_left > ul > li .right_block > section > ol > li > a .iconfont {
+    font-size: 12px;
+    font-weight: 900; }
+  
+  .banner_l .banner_left > ul > li .right_block > aside {
+    width: 250px; }
+  
+  .banner_l .banner_left > ul > li .right_block > section > ol li a .iconfont {
+    font-size: 12px; }
+  
+  .banner_l .banner_left > ul > li .right_block > section > ol li:nth-of-type(1) a:nth-of-type(1) {
+    border: none;
+    font-weight: 900; }
+/* 秒杀 */
+main{
+    width:1310px;
+    margin:0px auto;
+    background: #f5f5f5;
+    padding: 30px 0px;
+}
+main section{
+    margin:0 auto;
+    width:1200px;
+    height:430px;
+}
+main section .left{
+    width:190px;
+    height:430px;
+    float: left;
+    background:red;
+    margin-right:10px;
+}
+main section .left .circular{
+    width:100px;
+    height:80px;
+    border-radius: 50%;
+    border:1px solid #fff;
+    margin:18px auto;
+    text-align: center;
+    padding:10px 0px;
+}
+main section .left .circular span{
+    color:#fff;
+    font-size:27px;
+    margin:19px;
+}
+main section .left p:nth-of-type(1){
+    font-size: 27px;
+    text-align: center;
+    color:#fff;
+}
+main section .left .icon_font{
+    margin:0px auto;
+    padding:15px 0px;
+}
+main section .left .icon_font .iconfont{
+    font-size: 90px;
+    color:#fff;
+    padding:0px 30px;
+}
+main section .left p:nth-of-type(2){
+    font-size: 15px;
+    text-align: center;
+    color:#fff;
+}
+main section .left aside{
+    margin:25px auto;
+}
+main section .left aside span{
+    display: block;
+    width:50px;
+    height:50px;
+    background:#fff;
+    color:black;
+    font-size:20px;
+    line-height: 50px;
+    text-align: center;
+    float: left;
+    margin:0px 6px;
+}
+main section .right{
+    height:430px;
+    width:1000px;
+    float: left;
+}
+main section .right dl{
+    height: 205px;
+    width:495px;
+    margin-right:10px;
+    float: left;
+    background:#fff;
+}
+main section .right dl dt{
+    width:208px;
+    height: 208px;
+    margin-right: 10px;
+    float: left;
+}
+main section .right dl dt img{
+    width:100%;
+    height:100%;
+} 
+main section .right dl dd{
+    float: left;
+    width: 240px;
+    margin-left:10px;
+}
+main section .right dl dd h3{
+    font-size:16px;
+    margin-top:12px;
+}
+main section .right dl dd div{
+    border:1px solid red;
+    width:235px;
+    height:31px;
+    margin-top:30px;
+}
+main section .right dl dd div i{
+    color:red;
+    font-size: 17px;
+    float: left;
+    display:block;
+    width:90px;
+    height: 31px;
+    line-height: 31px;
+}
+main section .right dl dd div em{
+    width:67px;
+    height:31px;
+    float: left;
+    display:block;
+    font-size: 13px;
+    color:#ccc;
+    /* text-decoration:inline; */
+    line-height: 31px;
+}
+main section .right dl dd div a{
+    display:block;
+    width:78px;
+    float: left;
+    background:red;
+    color:#fff;
+    height:31px;
+    line-height: 31px;
+    text-align: center;
+}
+main section .right dl:nth-of-type(2){
+    margin:0;
+}
+main section .right dl:nth-of-type(3){
+    margin-top:17px;
+}
+main section .right dl:nth-of-type(4){
+    margin-top:17px;
+    margin-right:0;
+}
+/* 商品部分 */
+main article{
+    margin:0 auto;
+    height:575px;
+    width:1200px;
+    padding-top:30px;
+}
+main article .top{
+    height:40px;
+    width:1200px;
+}
+main article .top h2{
+    width:350px;
+    height: 40px;
+    line-height:40px;
+    float: left;
+    font-size:20px;
+}
+main article .top ul{
+    float: left;
+    width:850px;
+    padding-top:10px;
+    line-height:30px;
+    height:30px;
+}
+main article .top ul li{
+    float: right;
+    margin-left:12px;
+    font-size:12px;
+}
+main article .top ul li a{
+    font-size:12px;
+    color:#666;
+}
+main article .top ul li a .iconfont{
+    color:#666;
+    font-size:16px;
+}
+main article .left{
+    width:240px;
+    height:535px;
+    float: left;
+    background:red;
+}
+main article .left img{
+    width:100%;
+    height:100%;
+}
+main article .right{
+    width:960px;
+    height:535px;
+    float: left;
+    background:#fff;
+}
+main article .right dl{
+    width:239px;
+    border-right:1px solid #ccc;
+    height:266px;
+    float: left;
+}
+main article .right dl dt{
+    width:164px;
+    height:164px;
+    // background:yellow;
+    margin:12px auto;
+}
+main article .right dl dt img{
+    width:100%;
+    height: 100%;
+}
+main article .right dl dd{
+    font-size:14px;
+    margin-top:3px;
+    text-align: center;
+}
+main article .right dl dd:nth-of-type(2){
+    color:#ccc;
+}
+main article .right dl dd:nth-of-type(3){
+    color:red;
+}
+main article .right dl:nth-of-type(1){
+    border-top:1px solid #ccc;
+    border-bottom:1px solid #ccc;
+}
+main article .right dl:nth-of-type(2){
+    border-top:1px solid #ccc;
+    border-bottom:1px solid #ccc;
+}
+main article .right dl:nth-of-type(3){
+    border-top:1px solid #ccc;
+    border-bottom:1px solid #ccc;
+}
+main article .right dl:nth-of-type(4){
+    border-top:1px solid #ccc;
+    border-bottom:1px solid #ccc;
+}
+main article .right dl:nth-of-type(5){
+    border-bottom:1px solid #ccc;
+}
+main article .right dl:nth-of-type(6){
+    border-bottom:1px solid #ccc;
+}
+main article .right dl:nth-of-type(7){
+    border-bottom:1px solid #ccc;
+}
+main article .right dl:nth-of-type(8){
+    border-bottom:1px solid #ccc;
+}
+/* 底部 */
+footer{
+    height:42px;
+}
+footer .top{
+    width:1310px;
+    height: 199px;
+    // background:red;
+}
+footer .top img{
+    width:100%;
+    height:100%;
+}
+footer .bottom{
+    padding:44px 0px 0px 100px;
+    height:145px;
+    background: #f5f5f5;
+}
+footer .bottom ul{
+    width:150px;
+    height: 145px;
+    float: left;
+}
+footer .bottom ul h2{
+    font-size:16px;
+    margin-bottom: 5px;
+}
+footer .bottom ul li a{
+    font-size: 12px;
+    color:#666;
+}
+footer .bottom .right{
+    width:230px;
+    height:90px;
+    margin-left:10px;
+    padding-left:68px;
+    border-left:1px solid #666;
+    float: left;
+}
+footer .bottom .right h3{
+    font-size:20px;
+    color:red;
+}
+footer .bottom .right em{
+    display: block;
+    font-size:12px;
+    color:#666;
+}
+footer .bottom .right div{
+   width:136px;
+   height:34px;
+   border:1px solid #666;
+   text-align: center;
+   line-height: 34px;
+}
+footer .bottom .right div .iconfont{
+    font-size: 20px;
+    color:#666;
+}
+footer .bottom .right div span{
+    font-size:20px;
+    color:#666;
+}
+footer .foot{
+    width:1310px;
+    height:46px;
+    background:#757575;
+}
+footer .foot ul{
+    float: left;
+    height:46px;
+    width:600px;
+}
+footer .foot ul li{
+    float: left;
+    color:#ccc;
+    font-size:12px;
+    margin-top:10px;
+}
+footer .foot ul li:nth-of-type(1){
+    padding-right: 5px;
+}
+footer .foot ul li a{
+    display: block;
+    height:22px;
+    border-left:1px solid #ccc;
+    color:#ccc;
+    padding:0px 5px;
+}
+footer .foot ol{
+    float: left;
+    width:710px;
+    height:46px;
+}
+footer .foot ol li{
+    float: left;
+    color:#ccc;
+    font-size: 12px;
+    margin-top: 10px;
+}
+footer .foot ol li a{
+    display: block;
+    height:22px;
+    color:#ccc;
+    padding:0px 5px;
+}
+footer .foot ol li:nth-of-type(1) a{
+    border-right:1px solid #ccc;
+}
+footer .foot ol li:nth-of-type(3) a{
+    border-left:1px solid #ccc;
+}     
+footer .foot ol li:nth-of-type(2){
+    padding:0px 5px;
+}

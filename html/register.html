@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>注册</title>
+    <link rel="stylesheet" href="../css/register.css">
+    <link rel="stylesheet" href="../css/reset.css">
+    <script src="../js/jquery-1.10.1.min.js"></script>
+    <script src="../js/ajax.js"></script>
+    <script src="../js/register.js"></script>
+    <script src="../js/reset.js"></script>
+</head>
+<body>
+    <div class="container">
+        <!-- 头部导航 -->
+        <div class="head">
+            <!-- 图标 -->
+            <div class="head_nav">
+                <img src="../images/head_nav.jpg" alt="">
+            </div>
+            <!-- 导航 -->
+            <header>
+                <ul>
+                    <li><a href="">联想首页</a></li>
+                    <li><a href="">商城</a></li>
+                    <li><a href="">社区</a></li>
+                    <li><a href="">服务</a></li>
+                    <li><a href="">资讯</a></li>
+                    <li><a href="">门店</a></li>
+                    <li><a href="">手机版</a></li>
+                </ul>
+            </header>
+        </div>
+        <!-- 中间 -->
+        <main>
+            <!-- 个人用户注册 -->
+            <section>
+                <h2>注册联想会员</h2>
+                <h3>个人用户注册</h3>
+                <h3 id="h3_1">企业用户注册</h3>
+                <input type="text" placeholder="输入手机号" class="phone">
+                <div class="code0">
+                    <input type="text" placeholder="输入验证码" class="input1">
+                    <button class="code">获取验证码</button>
+                </div>
+                <input type="password" placeholder="输入密码，密码长度8-20位字符" class="password">
+                <input type="password" placeholder="再次输入密码" class="repassword">
+                <div class="alert"></div>
+                <button id ='submit'>立即注册</button>
+                <div class="txt">
+                    <span>注册账号即表示您同意并愿意遵守联想<i>使用条款</i>和<i>隐私权政策</i></span>
+                    <p>已有账号<i class="get">点击登录&gt;</i></p>
+                </div>
+            </section>
+            <!-- 企业用户注册 -->
+            <aside>
+                <h2>注册联想会员</h2>
+                <h3 id="h3_2">个人用户注册</h3>
+                <h3>企业用户注册</h3>
+                <input type="text" placeholder="输入手机号" class="phone1">
+                <input type="text" placeholder="企业名称" id="comNmae">
+                <input type="text" placeholder="企业邮箱" id="comEmail">
+                <input type="text" placeholder="企业税号" id="comTax">
+                <input type="password" placeholder="输入密码，密码长度8-20位字符" class="password1">
+                <input type="password" placeholder="再次输入密码" class="repassword1">
+                <div class="code0">
+                    <input type="text" placeholder="输入验证码" class="input2">
+                    <button class="code1">获取验证码</button>
+                </div>
+                <div class="alert1"></div>
+                <button id="submit1">立即注册</button>
+                <div class="txt">
+                    <span>注册账号即表示您同意并愿意遵守联想<i>使用条款</i>和<i>隐私权政策</i></span>
+                    <p>已有账号<i class="get1">点击登录&gt;</i></p>
+                </div>
+            </aside> 
+        </main>
+    </div>
+</body>
+</html>

@@ -9,7 +9,8 @@ body {
   background: black;
   position: absolute;
   border-radius: 50%;
-  display: none; }
+  display: none;
+  z-index: 4; }
 
 .container {
   background: #fff; }
@@ -142,35 +143,18 @@ main {
       height: 620px;
       float: left;
       position: relative; }
-      main section > aside > ol {
-        height: 20px;
-        width: 300px;
-        position: absolute;
-        top: 500px;
-        right: 0px;
-        bottom: 0px;
-        left: 30%;
-        z-index: 2; }
-        main section > aside > ol li {
-          width: 10px;
-          height: 10px;
-          margin: 5px;
-          border-radius: 50%;
-          background: #999;
-          margin: 5px;
-          float: left; }
-        main section > aside > ol .color {
-          width: 10px;
-          height: 10px;
-          margin: 5px;
-          border-radius: 50%;
-          border-radius: 50%;
-          background: red; }
       main section > aside .banner {
         width: 520px;
         height: 520px;
         position: relative;
         overflow: hidden; }
+        main section > aside .banner #mark {
+          width: 150px;
+          height: 150px;
+          background: rgba(0, 0, 0, 0.2);
+          position: absolute;
+          z-index: 3;
+          display: none; }
         main section > aside .banner a {
           display: block;
           position: relative;
@@ -217,7 +201,22 @@ main {
     main section article {
       width: 678px;
       height: 620px;
-      float: left; }
+      float: left;
+      position: relative; }
+      main section article #big {
+        width: 300px;
+        height: 300px;
+        border: 1px solid black;
+        position: absolute;
+        z-index: 3;
+        top: 100px;
+        left: 50px;
+        overflow: hidden;
+        display: none; }
+        main section article #big img {
+          width: 1040px;
+          height: 1040px;
+          position: absolute; }
       main section article h1 {
         height: 58px;
         width: 678px;
