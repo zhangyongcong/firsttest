@@ -7,7 +7,6 @@ define(["jquery",'jquery-cookie','parabola'],function($){
             type:"get",
             url:"../data/goods.json",
             success:function(data){
-                // alert(data);
                 var arr = data;
                     $(`
                     <a href=""><img src="${arr[id].img}" alt=""></a>
@@ -174,9 +173,11 @@ function add(){
         var id = this.id;
         // 判断是否是第一次存储
         var first = $.cookie('goods') == null ? true : false;
+        var c = parseInt($('#num1').html());
         if(first){
             // 第一次存储
-            var arr = [{id:id,num:1}];
+            // var c = parseInt($('#num1').html());
+            var arr = [{id:id,num:c}];
             $.cookie("goods",JSON.stringify(arr),{
                 expires: 7,
                 path:'/'
@@ -188,14 +189,14 @@ function add(){
             var same = false; //假设没有存储过
             for(var i = 0; i< cookieArr.length ; i++){
                 if(cookieArr[i].id == id){
-                    cookieArr[i].num++;
+                    cookieArr[i].num+=c;
                     same = true;
                     break;
                 }
             }
             // 判断是否添加过
             if(!same){
-                var obj = {id:id,num:1};
+                var obj = {id:id,num:c};
                 cookieArr.push(obj);
             }
 
@@ -217,38 +218,21 @@ function add(){
 })
         //加和减
         $("main section article").on("click", ".bottom .count1 #count i", function(){
-            //商品id
-            var id = getUrl(`id`);
-            // alert(id);
-            //取出对应cookie中的数据
-            var cookieArr = JSON.parse($.cookie("goods"));
-            // alert(JSON.stringify(cookieArr));
-            for(var i = 0; i < cookieArr.length; i++){
-                if(id == cookieArr[i].id){
-                    //要修改的数据
-                    var goodObj = cookieArr[i];
-                    break;
-                }
-            }
+            var num =$(this).siblings('#num1').html();
+            // alert($(this).siblings('#num1').html());
             if(this.innerHTML == "+"){
-                goodObj.num++;
+                $(this).siblings('#num1').html(parseInt(num)+1);
             }else{
-                    if(goodObj.num == 1){
-                    alert("数量已经见到最小了！");
+                if(num == 1){
+                    alert("数量已经最小了！");
                 }else{
-                    goodObj.num--;
+                    $(this).siblings('#num1').html(parseInt(num)-1);
                 }
             }
-    
-            //重新显示新的数量
-            $(this).siblings("#num1").html(goodObj.num);
-            $.cookie("goods", JSON.stringify(cookieArr), {
-                expires: 7,
-                path:'/'
-            });
+            $(this).siblings("#num1").html();
             sc_num();
-    
         })
+        
 
 }
             // 统计购物车中的商品数量

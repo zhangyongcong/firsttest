@@ -166,7 +166,7 @@ define(['jquery','jquery-cookie',"parabola"],function($){
                 // console.log(goodObj.num)
             }else{
                     if(goodObj.num == 1){
-                    alert("数量已经见到最小了！");
+                    alert("数量已经最小了！");
                     // goodObj.num == 1;
                 }else{
                     goodObj.num--;
