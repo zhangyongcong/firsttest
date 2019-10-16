@@ -4,12 +4,7 @@ define(['jquery'], function($){
             type:"get",
             url:"../data/nav.json",
             success:function(data){
-                // alert(data);
-                 
-                // var arr2 = data[0].right_block[0].right; 
-                // alert(arr1.length);
                 var arr = data;
-               
                 for(var i = 0; i < arr.length; i++){
                     var node = $(`
                             <li><a href="">${arr[i].list}<i class="iconfont">&#xe634;</i></a>                           
@@ -22,7 +17,6 @@ define(['jquery'], function($){
                             </li>
                         `).appendTo('.banner_l .banner_left ul')
                         var arr1 = arr[i].right_block;
-                        // alert(i)
                         for(var j = 0 ;j < arr1.length;j++){
                         var node1 =$(`<ol><li><a href="${arr1[j].url}">${arr1[j].title}<i class="iconfont">&#xe634;</i></a></li></ol>`).appendTo(node.find('.right_block').find('section'))
                         var arr2 = arr1[j].right;

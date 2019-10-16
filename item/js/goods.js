@@ -18,11 +18,12 @@ require(['goods_banner'],function(goods_banner){
     goods_banner.add();
     goods_banner.slide();
 })
+// 右侧边栏
 require(['right_block'],function(right_block){
     right_block.download();
     right_block.scroll();
 })
-
+// 拖拽
 require(['drag'],function(drag){
     drag.drag();
 })

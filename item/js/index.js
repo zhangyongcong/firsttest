@@ -1,30 +1,45 @@
 define(['jquery'],function($){
     function index(){
-        $(`<div class="head">
-    <!-- 图标 -->
-    <div class="head_nav">
-        <img src="images/head_nav.jpg" alt="">
-    </div>
-    <!-- 导航 -->
-    <header>
-        <ul>
-            <li><a href="">联想首页</a></li>
-            <li><a href="">商城</a></li>
-            <li><a href="">社区</a></li>
-            <li><a href="">服务</a></li>
-            <li><a href="">资讯</a></li>
-            <li><a href="">门店</a></li>
-            <li><a href="">手机版</a></li>
-        </ul>
-        <p>
-            <a href="html/login.html">登录</a>
-            <a href="html/register.html">注册</a>
-            <a href=""><i class="iconfont">&#xe655;</i>购物车<span>(0)</span></a>
-        </p>
-    </header>
-</div>`).appendTo('container')
+        $(`
+        <ol>
+        <li>新品发布会</li>
+        <li>私人订制</li>
+        <li>合伙人</li>
+        <li>以旧换新</li>
+        <li>租赁</li>
+        <li>0元试用</li>
+        <li>积分商城</li>
+        <li>企业采购</li>
+    </ol>`).appendTo('.container .nav')
+    }
+
+    function silde(){
+        var aLis = $('.container .nav').find('ol').find('li');
+        // alert(aLis[0].innerHTML);   
+        for(let i = 0; i < aLis.length; i++){
+             $('.container .nav').on("mouseenter","ol li",function(){
+                // alert(1)
+                $(this).css({
+                    "color":"orange"
+                })
+                $('.center').css({
+                    'display':"block"
+                })
+            }) 
+            $('.container .nav').on("mouseleave","ol li",function(){
+                // alert(1)
+                $(this).css({
+                    "color":"black"
+                })
+                $('.center').css({
+                    'display':"none"
+                })
+            })  
+        }   
+                
     }
     return{
-        index:index
+        index:index,
+        silde:silde
     }
 });

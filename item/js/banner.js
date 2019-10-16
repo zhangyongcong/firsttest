@@ -1,22 +1,16 @@
-/* 
-    遵从AMD规范编写代码
-*/
 
 define(["jquery"],function($){
+    // banner图数据下载
     function download(){
         $.ajax({
             type:"get",
             url:"../data/banner.json",
             success:function(data){
-                // alert(data);
                 var arr = data;
                 for(var i = 0; i < arr.length; i++){
                     $(`
                             <a href="${arr[i].url}"><img src="${arr[i].img}" alt=""></a>
                         `).appendTo('.banner section')
-                   /*  $(`
-                        <li></li>
-                    `).appendTo('.banner ol') */
                     if(i == 0){
                         $(`
                         <li class = "active"></li>
@@ -84,15 +78,6 @@ define(["jquery"],function($){
             aImgs.hide().css("opacity",0).eq(iNow).show().animate({
                 opacity:1
             },0);
-
-            /* aImgs.animate({
-                top: -406 *iNow
-            },500,function(){
-                if(iNow == aBtns.size()){
-                    
-                    tab();iNow=0;
-                }
-            }) */
             aBtns.removeClass('active').eq(iNow).addClass('active');
         }
 

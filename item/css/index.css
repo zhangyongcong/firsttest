@@ -120,6 +120,44 @@ body {
     padding: 0px 3px;
     color: red; }
 
+.menu {
+  margin: 0 auto;
+  background: yellowgreen;
+  position: absolute;
+  z-index: 4; }
+
+.menu .center {
+  padding: 10px 55px;
+  height: 270px;
+  width: 1200px;
+  margin: 0 auto;
+  display: none; }
+
+.menu .center dl {
+  float: left;
+  height: 270px;
+  width: 240px; }
+
+.menu .center dl dt {
+  width: 164px;
+  height: 164px;
+  margin: 12px auto; }
+
+.menu .center dl dt img {
+  width: 100%;
+  height: 100%; }
+
+.menu .center dl dd {
+  font-size: 14px;
+  margin-top: 3px;
+  text-align: center; }
+
+.menu .center dl dd:nth-of-type(2) {
+  color: #ccc; }
+
+.menu .center dl dd:nth-of-type(3) {
+  color: red; }
+
 .head header > p > a:nth-of-type(1) {
   border-right: 1px solid #ccc; }
 
@@ -268,9 +306,6 @@ body {
   border-bottom: 1px solid #ccc;
   font-size: 18px; }
 
-/* .banner_l .banner_left>ul li{
-    position: relative;
-} */
 .banner_l .banner_left > ul li a .iconfont {
   font-size: 18px;
   float: right; }

@@ -1,6 +1,6 @@
 define(['jquery'],function($){
+    // 下方列表数据
     function download(){
-        // sc_num();
         $.ajax({
             type:"get",
             url:"../data/data.json",

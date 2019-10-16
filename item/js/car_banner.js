@@ -108,7 +108,7 @@ define(['jquery','jquery-cookie',"parabola"],function($){
                     var arr = [{id:id,num:1}];
                     $.cookie("goods",JSON.stringify(arr),{
                         expires: 7,
-                        path:'/'
+
                     })
                 }else{
                     // 判断是否添加过
@@ -130,13 +130,13 @@ define(['jquery','jquery-cookie',"parabola"],function($){
     
                     $.cookie('goods',JSON.stringify(cookirStr),{
                         expires: 7,
-                        path:'/'
+
                     })
                 }
                 if(cookieArr.length){
                     $.cookie('goods',JSON.stringify(cookieArr),{
                         expires: 7,
-                        path:'/'
+
                     })
                 }else{
                    $.cookie('goods',null); 
@@ -164,6 +164,11 @@ define(['jquery','jquery-cookie',"parabola"],function($){
             if(this.innerHTML == "+"){
                 goodObj.num++;
                 // console.log(goodObj.num)
+                let price = Number($(this).parent().parent().parent().find('.price').find('i').text());
+                // alert(price);
+                let num =Number($(this).parent().parent().parent().parent().next().find('.right').find('.p1').find('i').text());
+                // alert(num)
+                $(this).parent().parent().parent().parent().next().find('.right').find('.p1').find('i').html(num + price);
             }else{
                 if(goodObj.num == 1){
                     // 当数量小于1时删除
@@ -177,9 +182,14 @@ define(['jquery','jquery-cookie',"parabola"],function($){
                     }
                 }else{
                     goodObj.num--;
+                    let price = Number($(this).parent().parent().parent().find('.price').find('i').text());
+                    // alert(price);
+                    let num =Number($(this).parent().parent().parent().parent().next().find('.right').find('.p1').find('i').text());
+                    // alert(num)
+                    $(this).parent().parent().parent().parent().next().find('.right').find('.p1').find('i').html(num - price);
                 }
             }
-    
+
             //重新显示新的数量
             $(this).parent().parent().prev().children().text();
         //    alert( $(this).parent().parent().prev().children().html());
@@ -191,32 +201,10 @@ define(['jquery','jquery-cookie',"parabola"],function($){
 
             // alert($(this).parent().parent().next().children('i').html());
             $.cookie("goods", JSON.stringify(cookieArr), {
-                expires: 7,
-                path:'/'
+                expires: 7
             });
             sc_num();
     
-        })
-
-
-        // 合计
-        $('main .aside').on("click",".data input",function(){
-            // var id  =  $(this).parent().attr('id');
-            // alert(id);
-            var money = parseInt($(this).parent().find('.money').find('i').html());
-            // alert(money);
-            var num = parseInt($(this).parent().parent().next().find('.right').find('.p1').find('i').html());
-            // alert(num);
-            var isChecked = $(this).prop('checked');
-            if(isChecked == true){
-              var num = num += money;
-              $(this).parent().parent().next().find('.right').find('.p1').find('i').html(num+'.00');
-              $(this).parent().parent().next().find('.right').find('.p2').find('i').html(num+'.00');
-            }else{
-              var num = num -= money;
-              $(this).parent().parent().next().find('.right').find('.p1').find('i').html(num+'.00');
-              $(this).parent().parent().next().find('.right').find('.p2').find('i').html(num+'.00');
-            } 
         })
     }
                 // 统计购物车中的商品数量
@@ -286,15 +274,12 @@ define(['jquery','jquery-cookie',"parabola"],function($){
                                     </div>
                                 </div>`).appendTo('main .aside');
                                 }
-                                $(`<div class="left">
-                                <input type="checkbox">
-                                <span>全选</span>
-                                <a href="">删除选中商品</a>
-                            </div>
+                                // let sum = 0;
+                                $(`
                             <div class="right">
-                                <p class="p1">商品总价：<i>0.00</i></p>
+                                <p class="p1">商品总价：<i></i></p>
                                 <p>优惠节省：<i>0.00</i></p>
-                                <p class="p2">合计：<i>0.00</i></p>
+                                <p class="p2">合计：<i></i></p>
                             </div>
                         </div>`).appendTo('main .bottom')
                             }
@@ -304,26 +289,27 @@ define(['jquery','jquery-cookie',"parabola"],function($){
                         }
                     })
     }
-
     // 合计
-    /* $('main .aside').on("click",".data input",function(){
+        $('main .aside').on("click",".data input",function(){
         // var id  =  $(this).parent().attr('id');
         // alert(id);
-        var money = parseInt($(this).parent().find('.money').find('i').html());
-        // alert(money);
-        var num = parseInt($(this).parent().parent().next().find('.right').find('.p1').find('i').html());
-        // alert(num);
         var isChecked = $(this).prop('checked');
         if(isChecked == true){
-          var num = num += money;
-          $(this).parent().parent().next().find('.right').find('.p1').find('i').html(num);
+            let price = Number($(this).parent().find('.money').find('i').text());
+            let sum =  Number($(this).parent().parent().next().find('.right').find('.p1').find('i').text())
+            // alert(price);
+           $(this).parent().parent().next().find('.right').find('.p1').find('i').html(price + sum);
         }else{
-          var num = num -= money;
-          $(this).parent().parent().next().find('.right').find('.p1').find('i').html(num);
+            let price = Number($(this).parent().find('.money').find('i').text());
+            let sum =  Number($(this).parent().parent().next().find('.right').find('.p1').find('i').text())
+            // alert(price);
+           $(this).parent().parent().next().find('.right').find('.p1').find('i').html(sum - price);
         }
         // sc_num();
 
-    }) */
+        })
+
+    
     return {
         download:download,
         banner:banner,

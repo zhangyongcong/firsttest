@@ -179,8 +179,7 @@ function add(){
             // var c = parseInt($('#num1').html());
             var arr = [{id:id,num:c}];
             $.cookie("goods",JSON.stringify(arr),{
-                expires: 7,
-                path:'/'
+                expires: 7
             })
         }else{
             // 判断是否添加过
@@ -201,14 +200,12 @@ function add(){
             }
 
             $.cookie('goods',JSON.stringify(cookirStr),{
-                expires: 7,
-                path:'/'
+                expires: 7
             })
         }
         if(cookieArr.length){
             $.cookie('goods',JSON.stringify(cookieArr),{
-                expires: 7,
-                path:'/'
+                expires: 7
             })
         }else{
            $.cookie('goods',null); 
