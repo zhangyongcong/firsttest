@@ -108,7 +108,7 @@ define(['jquery','jquery-cookie',"parabola"],function($){
                     var arr = [{id:id,num:1}];
                     $.cookie("goods",JSON.stringify(arr),{
                         expires: 7,
-
+                        path:'/'
                     })
                 }else{
                     // 判断是否添加过
@@ -130,13 +130,13 @@ define(['jquery','jquery-cookie',"parabola"],function($){
     
                     $.cookie('goods',JSON.stringify(cookirStr),{
                         expires: 7,
-
+                        path:'/'
                     })
                 }
                 if(cookieArr.length){
                     $.cookie('goods',JSON.stringify(cookieArr),{
                         expires: 7,
-
+                        path:'/'
                     })
                 }else{
                     $.cookie('goods',JSON.stringify(cookieArr),{

@@ -1,39 +1,57 @@
 define(['jquery'],function($){
     function index(){
-        $(`
-        <ol>
-        <li>新品发布会</li>
-        <li>私人订制</li>
-        <li>合伙人</li>
-        <li>以旧换新</li>
-        <li>租赁</li>
-        <li>0元试用</li>
-        <li>积分商城</li>
-        <li>企业采购</li>
-    </ol>`).appendTo('.container .nav')
+        $.ajax({
+            type:"get",
+            url:'../data/index.json',
+            success:function(data){
+                var arr = data;
+                for(let i = 0;i < arr.length;i++){
+                    var node = $(`
+                        <li><a href="">${arr[i].title}</a>
+                            <div class='menu'>
+                            <div class = "center">
+                            </div>
+                            </div>
+                        </li>`
+                        ).appendTo('.container .nav ol') 
+                    var arr1 = arr[i].rightArr;
+                    for(let j = 0;j< arr1.length;j++){
+                        $(`<a href="">
+                        <dl>
+                            <dt>
+                                <img src="${arr1[j].img}" alt="">
+                            </dt>
+                            <dd>${arr1[j].title}</dd>
+                            <dd>${arr1[j].desc}</dd>
+                            <dd>￥${arr1[j].price}</dd>
+                        </dl>
+                    </a>`).appendTo(node.find('.menu').find('.center'))
+                    } 
+                }
+            },
+            error:function(msg){
+                console.log(msg);
+            }
+        })
     }
 
     function silde(){
-        var aLis = $('.container .nav').find('ol').find('li');
-        for(let i = 0; i < aLis.length; i++){
-             $('.container .nav').on("mouseenter","ol li",function(){
-                $(this).css({
+             $('.container .nav ol').on("mouseenter","li",function(){
+                //  alert(this.innerHTML);
+                $(this).children().css({
                     "color":"orange"
                 })
-                $('.center').css({
-                    'display':"block"
-                })
+                $(".center").eq($(this).index()).show();
+                return false;
             }) 
-            $('.container .nav').on("mouseleave","ol li",function(){
+            $('.container .nav ol').on("mouseleave","li",function(){
                 // alert(1)
-                $(this).css({
+                $(this).children().css({
                     "color":"black"
                 })
-                $('.center').css({
-                    'display':"none"
-                })
-            })  
-        }   
+                $(".center").eq($(this).index()).hide();
+                return false;
+            })    
                 
     }
     return{

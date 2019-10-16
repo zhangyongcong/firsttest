@@ -9,11 +9,12 @@ body {
   background: black;
   position: absolute;
   border-radius: 50%;
-  display: none;
-  z-index: 4; }
+  display: none; }
 
 .container {
-  background: #fff; }
+  margin: 0 auto;
+  width: 1310px;
+  position: relative; }
 
 .right_lan > dl:last-child {
   height: 20px;
@@ -28,9 +29,10 @@ body {
   width: 50px;
   height: 20px;
   background: #666; }
-  .right_lan > dl:last-child dt .iconfont {
-    font-size: 30px;
-    color: #fff; }
+
+.right_lan > dl:last-child dt .iconfont {
+  font-size: 30px;
+  color: #fff; }
 
 .right_lan > dl:last-child:hover {
   cursor: pointer; }
@@ -46,45 +48,61 @@ body {
   border: 1px solid #666;
   border-bottom: none;
   display: none; }
-  .right_lan dl {
-    width: 50px;
-    height: 43px;
-    padding-top: 6px;
-    text-align: center;
-    border-bottom: 1px solid #666;
-    background: #fff; }
-    .right_lan dl dt .iconfont {
-      font-size: 18px; }
-      .right_lan dl dt .iconfont:hover {
-        color: red; }
-    .right_lan dl:hover {
-      cursor: pointer;
-      color: red; }
-    .right_lan dl dd {
-      font-size: 12px; }
+
+.right_lan dl {
+  width: 50px;
+  height: 43px;
+  padding-top: 6px;
+  text-align: center;
+  border-bottom: 1px solid #666;
+  background: #fff; }
+
+.right_lan dl dt .iconfont {
+  font-size: 18px; }
+
+.right_lan dl dt .iconfont:hover {
+  color: red; }
+
+.right_lan dl:hover {
+  cursor: pointer;
+  color: red; }
+
+.right_lan dl dd {
+  font-size: 12px; }
+
+.head_nav1 {
+  position: fixed;
+  top: 0;
+  width: 70px;
+  height: 70px;
+  z-index: 6; }
 
 .head {
   height: 50px;
-  width: 1310px;
-  margin: 0 auto; }
-  .head .head_nav {
-    /* 图标 */
-    width: 50px;
-    height: 50px;
-    float: left; }
-    .head .head_nav img {
-      width: 100%;
-      height: 100%; }
-  .head header {
-    /* 头部导航 */
-    width: 1260px;
-    height: 50px;
-    float: left; }
-    .head header ul li {
-      height: 50px;
-      line-height: 50px;
-      margin-right: 22px;
-      float: left; }
+  width: 1310px; }
+
+.head .head_nav {
+  /* 图标 */
+  width: 50px;
+  height: 50px;
+  float: left;
+  position: relative; }
+
+.head .head_nav img {
+  width: 100%;
+  height: 100%; }
+
+.head header {
+  /* 头部导航 */
+  width: 1260px;
+  height: 50px;
+  float: left; }
+
+.head header ul li {
+  height: 50px;
+  line-height: 50px;
+  margin-right: 22px;
+  float: left; }
 
 .head header > ul li:nth-of-type(1) {
   margin-left: 5px; }
@@ -106,10 +124,53 @@ body {
   height: 20px;
   float: left;
   padding: 0 10px; }
-  .head header > p > a .iconfont {
-    margin: 0px 5px; }
-  .head header > p > a span {
-    padding: 0px 3px; }
+
+.head header > p > a .iconfont {
+  margin: 0px 5px; }
+
+.head header > p > a span {
+  padding: 0px 3px;
+  color: red; }
+
+.menu {
+  margin: 0 auto;
+  background: #ccc;
+  position: absolute;
+  z-index: 4;
+  left: 0;
+  line-height: 14px; }
+
+.menu .center {
+  padding: 10px 55px;
+  height: 270px;
+  width: 1200px;
+  margin: 0 auto;
+  display: none; }
+
+.menu .center dl {
+  float: left;
+  height: 270px;
+  width: 240px; }
+
+.menu .center dl dt {
+  width: 164px;
+  height: 164px;
+  margin: 12px auto; }
+
+.menu .center dl dt img {
+  width: 100%;
+  height: 100%; }
+
+.menu .center dl dd {
+  font-size: 14px;
+  margin-top: 5px;
+  text-align: center; }
+
+.menu .center dl dd:nth-of-type(2) {
+  color: #ccc; }
+
+.menu .center dl dd:nth-of-type(3) {
+  color: red; }
 
 .head header > p > a:nth-of-type(1) {
   border-right: 1px solid #ccc; }
@@ -119,16 +180,26 @@ body {
   width: 1310px;
   margin: 0 auto;
   height: 70px;
-  background: #999; }
-  .nav > ol {
-    height: 70px;
-    width: 1240px;
-    font-size: 17px;
-    line-height: 70px;
-    padding-left: 70px; }
-    .nav > ol li {
-      float: left;
-      margin-right: 45px; }
+  background: #999;
+  position: relative; }
+
+.nav1 {
+  width: 1280px;
+  position: fixed;
+  top: 0;
+  z-index: 5;
+  padding-left: 30px; }
+
+.nav > ol {
+  height: 70px;
+  width: 1240px;
+  font-size: 17px;
+  line-height: 70px;
+  padding-left: 70px; }
+
+.nav > ol li {
+  float: left;
+  margin-right: 45px; }
 
 main {
   width: 1310px;

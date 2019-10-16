@@ -1,5 +1,5 @@
 
-define(["jquery"],function($){
+define(["jquery",'jquery-cookie'],function($){
     // banner图数据下载
     function download(){
         $.ajax({
@@ -106,8 +106,23 @@ define(["jquery"],function($){
             tab();
         })
     }
+    function sc_num(){
+        var cookieStr = $.cookie("goods");
+        if(cookieStr){
+            var cookieArr = JSON.parse(cookieStr);
+            var sum = 0;
+            for(var i = 0; i < cookieArr.length;i++){
+                sum += cookieArr[i].num;
+            }
+            $('.head header .p a span').html(sum);
+        }else{
+            $('.head header .p a span').html(0);
+        }
+    }
+
     return {
         download:download,
         banner:banner,
+        sc_num:sc_num
     }
 })

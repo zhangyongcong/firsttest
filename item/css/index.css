@@ -122,9 +122,11 @@ body {
 
 .menu {
   margin: 0 auto;
-  background: yellowgreen;
+  background: #fff;
   position: absolute;
-  z-index: 4; }
+  z-index: 4;
+  left: 0;
+  line-height: 14px; }
 
 .menu .center {
   padding: 10px 55px;
@@ -149,7 +151,7 @@ body {
 
 .menu .center dl dd {
   font-size: 14px;
-  margin-top: 3px;
+  margin-top: 5px;
   text-align: center; }
 
 .menu .center dl dd:nth-of-type(2) {

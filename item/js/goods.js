@@ -27,3 +27,9 @@ require(['right_block'],function(right_block){
 require(['drag'],function(drag){
     drag.drag();
 })
+
+// 导航
+require(['index'],function(index){
+    index.index();
+    index.silde();
+})

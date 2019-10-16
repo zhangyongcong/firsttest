@@ -24,6 +24,7 @@ require.config({
 require(['banner'],function(banner){
     banner.download();
     banner.banner();
+    banner.sc_num();
 })
 // 左侧导航
 require(['nav'],function(nav){

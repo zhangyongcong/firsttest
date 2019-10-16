@@ -179,7 +179,8 @@ function add(){
             // var c = parseInt($('#num1').html());
             var arr = [{id:id,num:c}];
             $.cookie("goods",JSON.stringify(arr),{
-                expires: 7
+                expires: 7,
+                path:'/'
             })
         }else{
             // 判断是否添加过
@@ -200,12 +201,14 @@ function add(){
             }
 
             $.cookie('goods',JSON.stringify(cookirStr),{
-                expires: 7
+                expires: 7,
+                path:'/'
             })
         }
         if(cookieArr.length){
             $.cookie('goods',JSON.stringify(cookieArr),{
-                expires: 7
+                expires: 7,
+                path:'/'
             })
         }else{
            $.cookie('goods',null); 
@@ -229,8 +232,6 @@ function add(){
             $(this).siblings("#num1").html();
             sc_num();
         })
-        
-
 }
             // 统计购物车中的商品数量
             function sc_num(){
@@ -246,32 +247,6 @@ function add(){
                     $('.head header .p a span').html(0);
                 }
             }
-        // 抛物线
-    function ballMove(oBtn){
-        //小球位置显示在加入购物车按钮这个位置
-        $("#ball").css({
-            display: 'block',
-            left: $(oBtn).offset().left,
-            top: $(oBtn).offset().top
-        })
-
-        var X = $(".head header .p a span").offset().left - $(oBtn).offset().left;
-        var Y = $(".head header .p a span").offset().top - $(oBtn).offset().top;
-
-        //创建一个抛物线对象
-        var bool = new Parabola({
-            el: "#ball",
-            offset: [X, Y],
-            duration: 800,
-            curvature: 0.0005,
-            callback: function(){
-                $("#ball").hide();
-            }
-        });
-        //开始运动
-        bool.start();
-    }
-
     return {
         download:download,
         add:add,

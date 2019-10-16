@@ -41,9 +41,9 @@ define(['jquery'],function($){
                             </dl></a>
                         `).appendTo(node.find('.right')) 
                         } 
-                    } 
-                               
+                    }              
             },
+
             error:function(msg){
                 console.log(msg);
             }
