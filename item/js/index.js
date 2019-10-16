@@ -15,10 +15,8 @@ define(['jquery'],function($){
 
     function silde(){
         var aLis = $('.container .nav').find('ol').find('li');
-        // alert(aLis[0].innerHTML);   
         for(let i = 0; i < aLis.length; i++){
              $('.container .nav').on("mouseenter","ol li",function(){
-                // alert(1)
                 $(this).css({
                     "color":"orange"
                 })

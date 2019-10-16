@@ -139,10 +139,11 @@ define(['jquery','jquery-cookie',"parabola"],function($){
 
                     })
                 }else{
-                   $.cookie('goods',null); 
+                    $.cookie('goods',JSON.stringify(cookieArr),{
+                        expires:new Date()
+                    }) 
                 }
                 sc_num();
-                sc_msg();
         })
     
     
@@ -164,11 +165,17 @@ define(['jquery','jquery-cookie',"parabola"],function($){
             if(this.innerHTML == "+"){
                 goodObj.num++;
                 // console.log(goodObj.num)
+                // 单价
                 let price = Number($(this).parent().parent().parent().find('.price').find('i').text());
                 // alert(price);
-                let num =Number($(this).parent().parent().parent().parent().next().find('.right').find('.p1').find('i').text());
-                // alert(num)
-                $(this).parent().parent().parent().parent().next().find('.right').find('.p1').find('i').html(num + price);
+                // 数目
+                let num =Number($(this).parent().parent().parent().find('.counts').find('#num1').html());
+                // console.log(num)
+                // num + 1 => 点击后刷新，num拿到的是点击之前的值
+                $(this).parent().parent().parent().parent().next().find('.right').find('.p1').find('i').html((num + 1) * price);
+                // console.log(price)
+                // console.log($(".p1 i").text())
+
             }else{
                 if(goodObj.num == 1){
                     // 当数量小于1时删除
@@ -182,11 +189,7 @@ define(['jquery','jquery-cookie',"parabola"],function($){
                     }
                 }else{
                     goodObj.num--;
-                    let price = Number($(this).parent().parent().parent().find('.price').find('i').text());
-                    // alert(price);
-                    let num =Number($(this).parent().parent().parent().parent().next().find('.right').find('.p1').find('i').text());
-                    // alert(num)
-                    $(this).parent().parent().parent().parent().next().find('.right').find('.p1').find('i').html(num - price);
+                    $(this).parent().parent().parent().parent().next().find('.right').find('.p1').find('i').html(0);
                 }
             }
 
@@ -243,10 +246,16 @@ define(['jquery','jquery-cookie',"parabola"],function($){
                                         }
                                     }
                                 }
-            
+                                $(`
+                                    <div class="right">
+                                        <p class="p1">商品总价：<i></i></p>
+                                        <p>优惠节省：<i>0.00</i></p>
+                                        <p class="p2">合计：<i></i></p>
+                                    </div>
+                                </div>`).appendTo('main .bottom')
                                 for(var i = 0;i < newArr.length;i++){
                                     $(` <div class="data" id="${newArr[i].id}">
-                                    <input type="checkbox">
+                                    <input type="checkbox" class="check">
                                     <div class="img">
                                         <img src="${newArr[i].img}" alt="">
                                     </div>
@@ -273,15 +282,13 @@ define(['jquery','jquery-cookie',"parabola"],function($){
                                             <a><i>删除</i>/<span>移入收藏夹</span></a>
                                     </div>
                                 </div>`).appendTo('main .aside');
-                                }
+                                // console.log($(".p1 i").text());
+                                let price = parseInt(newArr[i].num * Number($('.data').eq(i).find('.price').text()));
+                                // alert(price)
+                                $('main .bottom').find('.right').find('.p1').find('i').text(Number($('main .bottom').find('.right').find('.p1').find('i').text())+price);
+                                // console.log(l);
+                            }
                                 // let sum = 0;
-                                $(`
-                            <div class="right">
-                                <p class="p1">商品总价：<i></i></p>
-                                <p>优惠节省：<i>0.00</i></p>
-                                <p class="p2">合计：<i></i></p>
-                            </div>
-                        </div>`).appendTo('main .bottom')
                             }
                         },
                         error:function(msg){
@@ -289,12 +296,13 @@ define(['jquery','jquery-cookie',"parabola"],function($){
                         }
                     })
     }
-    // 合计
+        // 合计
         $('main .aside').on("click",".data input",function(){
         // var id  =  $(this).parent().attr('id');
         // alert(id);
         var isChecked = $(this).prop('checked');
         if(isChecked == true){
+            $(this).parent().parent().next().find('.right').find('.p1').find('i').html(0);
             let price = Number($(this).parent().find('.money').find('i').text());
             let sum =  Number($(this).parent().parent().next().find('.right').find('.p1').find('i').text())
             // alert(price);
@@ -305,8 +313,6 @@ define(['jquery','jquery-cookie',"parabola"],function($){
             // alert(price);
            $(this).parent().parent().next().find('.right').find('.p1').find('i').html(sum - price);
         }
-        // sc_num();
-
         })
 
     
