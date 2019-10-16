@@ -8,7 +8,7 @@ require.config({
         "jquery-cookie":"jquery.cookie",
         "banner":"banner",
         "nav":"nav",
-        "list":"list",
+        "index_list":"index_list",
         "index":"index",
         "right_block":"right_block",
         "parabola":"parabola",
@@ -31,9 +31,9 @@ require(['nav'],function(nav){
     nav.nav();
 })
 
-require(['list'],function(list){
-    list.download();
-    // list.add();
+require(['index_list'],function(index_list){
+    index_list.download();
+    // index_list.add();
 })
 
 require(['index'],function(index){
