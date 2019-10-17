@@ -165,7 +165,7 @@ function add(){
     sc_num();
     // 点击按钮跳转订单页
     $('main section article').on("click",".bottom .button .btn2",function(){
-        location.href="car.html"
+        location.href="http://localhost:8888/html/car.html"
     })
     // 点击按钮添加购物车
     $('main section article').on("click",".bottom .button .btn1",function(){

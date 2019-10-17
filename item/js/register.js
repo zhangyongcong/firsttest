@@ -2,7 +2,7 @@
 $(function(){
     /* 个人注册页点击登录按钮 */
     $(".get").click(function(){
-        location.href = 'login.html';
+        location.href = 'http://localhost/Lenovo/item/html/login.html';
     });
     /* 个人注册页面验证码 */
     $('.code').click(function(){
@@ -111,7 +111,9 @@ $(function(){
                         "color":"red"
                     });
                 }else{
-                   location.href="login.html";
+                    setTimeout(function(){
+                        location.href="http://localhost/Lenovo/item/html/login.html";
+                    }, 2000);
                 }                       
             },
             error:function(msg){
@@ -126,7 +128,7 @@ $(function(){
     });
 
     $(".get1").click(function(){
-        location.href = 'login.html';
+        location.href = 'http://localhost/Lenovo/item/html/login.html';
     });
     /* 密码 */
     $('.password1').blur(function(){
@@ -278,7 +280,9 @@ $(function(){
                         "color":"red"
                     });
                 }else{
-                   location.href="login.html";
+                    setTimeout(function(){
+                        location.href="http://localhost/Lenovo/item/html/login.html";
+                    }, 2000);
                 }                       
             },
             error:function(msg){

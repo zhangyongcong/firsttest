@@ -14,6 +14,7 @@ require.config({
 require(['list_data'],function(list_data){
     list_data.download();
     list_data.add();
+    // list_data.ballMove();
 })
 
 require(['right_block'],function(right_block){

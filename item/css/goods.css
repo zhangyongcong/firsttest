@@ -3,14 +3,6 @@ body {
   min-width: 1310px;
   _width: 1310px; }
 
-#ball {
-  width: 30px;
-  height: 30px;
-  background: black;
-  position: absolute;
-  border-radius: 50%;
-  display: none; }
-
 .container {
   margin: 0 auto;
   width: 1310px;
@@ -134,7 +126,7 @@ body {
 
 .menu {
   margin: 0 auto;
-  background: #ccc;
+  background: #fff;
   position: absolute;
   z-index: 4;
   left: 0;

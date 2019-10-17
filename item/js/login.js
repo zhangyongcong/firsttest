@@ -82,7 +82,7 @@
                    });
                    $('.alert').html(obj.message);
                }else{
-                   location.href = "../index.html";
+                   location.href = "http://localhost:8888";
                }
                 $('.alert').css({
                     'display':'block'
@@ -116,7 +116,7 @@
                     });
                     $('.alert').html(obj.message);
                 }else{
-                    location.href = "../index.html";
+                    location.href = "http://localhost:8888";
                 }
                 $('.alert').css({
                     'display':'block'

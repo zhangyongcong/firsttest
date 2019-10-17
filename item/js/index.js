@@ -16,7 +16,7 @@ define(['jquery'],function($){
                         ).appendTo('.container .nav ol') 
                     var arr1 = arr[i].rightArr;
                     for(let j = 0;j< arr1.length;j++){
-                        $(`<a href="">
+                        $(`<a href="http://localhost:8888/html/goods.html?id=${arr1[j].id}">
                         <dl>
                             <dt>
                                 <img src="${arr1[j].img}" alt="">

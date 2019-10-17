@@ -1,4 +1,4 @@
-define(['jquery','jquery-cookie'],function($){
+define(['jquery','jquery-cookie','parabola'],function($){
     function download(){
         $.ajax({
             type:"get",
@@ -20,16 +20,16 @@ define(['jquery','jquery-cookie'],function($){
                         var arr1 = arr[i].rightArr;
                         for(var j = 0 ;j < arr1.length;j++){
                         $(`
-                        <a href="">
                         <dl>
                             <dt>
                                 <img src="${arr1[j].img}" alt="">
                             </dt>
                             <dd>${arr1[j].title}</dd>
                             <dd>￥${arr1[j].price}</dd>
-                            <button>加入购物车</button>
-                    </dl></a>
-                        `).appendTo(node.find('.right'))
+                            <button id="${arr1[j].id}">加入购物车</button>
+                    </dl>
+                    `).appendTo(node.find('.right'))
+                    // console.log(arr1[j].id)
                 }
                 }  
             },
@@ -42,21 +42,16 @@ define(['jquery','jquery-cookie'],function($){
 // 加载购物车
 function add(){
     sc_num();
-    // 点击按钮跳转订单页
-    $('main').on("click","article .right a dl button",function(){
-        location.href="car.html"
-    })
     // 点击按钮添加购物车
-    $('main section article').on("click",".bottom .button .btn1",function(){
+    $('main').on("click","article .right dl button",function(){
         //取出当前商品id
         var id = this.id;
+        // console.log(id);
         // 判断是否是第一次存储
         var first = $.cookie('goods') == null ? true : false;
-        var c = parseInt($('#num1').html());
         if(first){
             // 第一次存储
-            // var c = parseInt($('#num1').html());
-            var arr = [{id:id,num:c}];
+            var arr = [{id:id,num:1}];
             $.cookie("goods",JSON.stringify(arr),{
                 expires: 7,
                 path:'/'
@@ -65,17 +60,18 @@ function add(){
             // 判断是否添加过
             var cookirStr = $.cookie("goods");
             var cookieArr = JSON.parse(cookirStr);
+            // console.log(cookirStr)
             var same = false; //假设没有存储过
             for(var i = 0; i< cookieArr.length ; i++){
                 if(cookieArr[i].id == id){
-                    cookieArr[i].num+=c;
+                    cookieArr[i].num++;
                     same = true;
                     break;
                 }
             }
             // 判断是否添加过
             if(!same){
-                var obj = {id:id,num:c};
+                var obj = {id:id,num:1};
                 cookieArr.push(obj);
             }
 
@@ -83,18 +79,18 @@ function add(){
                 expires: 7,
                 path:'/'
             })
-        }
-        if(cookieArr.length){
-            $.cookie('goods',JSON.stringify(cookieArr),{
-                expires: 7,
-                path:'/'
-            })
-        }else{
-           $.cookie('goods',null); 
+            if(cookieArr.length){
+                $.cookie('goods',JSON.stringify(cookieArr),{
+                    expires: 7,
+                    path:'/'
+                })
+            }else{
+               $.cookie('goods',null); 
+            }
         }
         sc_num();
         ballMove(this);
-        return false;
+        // return false;
 })
 }
             // 统计购物车中的商品数量
@@ -120,8 +116,8 @@ function add(){
             top: $(oBtn).offset().top
         })
 
-        var X = $(".head header .p a span").offset().left - $(oBtn).offset().left;
-        var Y = $(".head header .p a span").offset().top - $(oBtn).offset().top;
+        var X = $(".head header .p .car").offset().left - $(oBtn).offset().left;
+        var Y = $(".head header .p .car").offset().top - $(oBtn).offset().top;
 
         //创建一个抛物线对象
         var bool = new Parabola({
@@ -138,6 +134,7 @@ function add(){
     }
     return{
         download:download,
-        add:add
+        add:add,
+        // ballMove:ballMove
     }
 })
