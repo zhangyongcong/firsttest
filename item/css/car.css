@@ -145,8 +145,13 @@ main {
         height: 14px; }
       main .bottom .left span {
         padding: 0px 5px; }
-      main .bottom .left > a {
-        margin-left: 10px; }
+      main .bottom .left > button {
+        margin-left: 10px;
+        width: 100px;
+        height: 30px;
+        border: none;
+        background: orangered;
+        border-radius: 5px; }
     main .bottom .right {
       width: 150px;
       font-size: 16px;

@@ -223,12 +223,10 @@ main {
       main article .right dl > dd {
         width: 192px;
         height: 14px;
-        margin-top: 10px;
+        margin-top: 20px;
         text-align: center;
         font-size: 14px;
         line-height: 14px; }
-      main article .right dl dd:nth-of-type(1) {
-        margin-top: 20px; }
       main article .right dl dd:nth-of-type(2) {
         color: red; }
     main article button {
@@ -236,7 +234,8 @@ main {
       border: none;
       background: orangered;
       margin: 15px 0px;
-      color: #fff; }
+      color: #fff;
+      border-radius: 5px; }
 
 /* 底部 */
 footer {
