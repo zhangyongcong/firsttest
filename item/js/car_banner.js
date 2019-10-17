@@ -135,17 +135,6 @@ define(['jquery','jquery-cookie'],function($){
                         path:'/'
                     })
                 }
-                if(cookieArr.length){
-                    $.cookie('goods',JSON.stringify(cookieArr),{
-                        expires: 7,
-                        path:'/'
-                    })
-                }else{
-                    $.cookie("goods", JSON.stringify(cookieArr), {
-                        expires: new Date(),
-                        path:'/'
-                    }); 
-                }
                 sc_num();
         })
         }
@@ -168,13 +157,14 @@ define(['jquery','jquery-cookie'],function($){
                     goodObj.num++;
                     // console.log(goodObj.num)
                     // 单价
-                    let price = Number($(this).parent().parent().parent().find('.price').find('i').text());
+                    // let price = Number($(this).parent().parent().parent().find('.price').find('i').text());
                     // alert(price);
                     // 数目
-                    let num =Number($(this).parent().parent().parent().find('.counts').find('#num1').html());
+                    // let num =Number($(this).parent().parent().parent().find('.counts').find('#num1').html());
                     // console.log(num)
+                    // let sum = Number($(this).parent().parent().parent().parent().next().find('.right').find('.p1').find('i').text())
                     // num + 1 => 点击后刷新，num拿到的是点击之前的值
-                    $(this).parent().parent().parent().parent().next().find('.right').find('.p1').find('i').html((num+1) * price);
+                    // $(this).parent().parent().parent().parent().next().find('.right').find('.p1').find('i').html((num+1) * price+sum);
                     // console.log(price)
                     // console.log($(".p1 i").text())
     
@@ -192,13 +182,13 @@ define(['jquery','jquery-cookie'],function($){
                     }else{
                         goodObj.num--;
                         // 单价
-                    let price = Number($(this).parent().parent().parent().find('.price').find('i').text());
+                    // let price = Number($(this).parent().parent().parent().find('.price').find('i').text());
                     // alert(price);
                     // 数目
-                    let num =Number($(this).parent().parent().parent().find('.counts').find('#num1').html());
+                    // let num =Number($(this).parent().parent().parent().find('.counts').find('#num1').html());
                     // console.log(num)
                     // num + 1 => 点击后刷新，num拿到的是点击之前的值
-                    $(this).parent().parent().parent().parent().next().find('.right').find('.p1').find('i').html((num - 1) * price);
+                    // $(this).parent().parent().parent().parent().next().find('.right').find('.p1').find('i').html((num - 1) * price);
                         // $(this).parent().parent().parent().parent().next().find('.right').find('.p1').find('i').html(0);
                     }
                 }
@@ -298,7 +288,7 @@ define(['jquery','jquery-cookie'],function($){
                                 // console.log($(".p1 i").text());
                                 // let price = parseInt(newArr[i].num * Number($('.data').eq(i).find('.price').text()));
                                 // alert(price)
-                                // $('main .bottom').find('.right').find('.p1').find('i').text(Number($('main .bottom').find('.right').find('.p1').find('i').text())+price);
+                               // $('main .bottom').find('.right').find('.p1').find('i').text(Number($('main .bottom').find('.right').find('.p1').find('i').text())+price);
                                 // console.log(l);
                             }
                             }

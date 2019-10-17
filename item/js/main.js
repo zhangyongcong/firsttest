@@ -25,6 +25,7 @@ require(['banner'],function(banner){
     banner.download();
     banner.banner();
     banner.sc_num();
+    banner.login();
 })
 // 左侧导航
 require(['nav'],function(nav){

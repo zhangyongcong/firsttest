@@ -120,9 +120,27 @@ define(["jquery",'jquery-cookie'],function($){
         }
     }
 
+    // 登录后显示用户名
+        
+    
+        
+        function login(){
+            var cookirStr = $.cookie("name");
+            // alert(cookirStr)
+        if(cookirStr){
+            $('.login').html('亲爱的用户' + cookirStr + "欢迎登录")
+            $('.register').html("<a href='' id='close'>【退出】</a>")
+        }
+            $('.register').on('click','#close',function(){
+            $.cookie('name',null);
+            window.location.reload();
+        })  
+        }
+
     return {
         download:download,
         banner:banner,
-        sc_num:sc_num
+        sc_num:sc_num,
+        login:login
     }
 })

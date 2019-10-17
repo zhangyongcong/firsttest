@@ -1,6 +1,4 @@
-
-
-   /* PC1点击切换二维码登录 */
+ /* PC1点击切换二维码登录 */
    $(function(){
        $('#e_icon').click(function(){
            $('#phone_login').css({
@@ -83,6 +81,8 @@
                    $('.alert').html(obj.message);
                }else{
                    location.href = "http://localhost:8888";
+                   setCookie();
+                   
                }
                 $('.alert').css({
                     'display':'block'
@@ -92,6 +92,7 @@
                alert(msg);
            }
        });
+       
    });
    
    /* 验证码 */
@@ -117,6 +118,7 @@
                     $('.alert').html(obj.message);
                 }else{
                     location.href = "http://localhost:8888";
+                    setCookie()
                 }
                 $('.alert').css({
                     'display':'block'
@@ -125,7 +127,13 @@
             error:function(msg){
                 alert(msg);
             }
-        });
+        }); 
     });
 
+    function setCookie(){
+        var username = $('#input1').val();
+           $.cookie("name",username,{
+                path:'/'
+            })
+        }
 });
