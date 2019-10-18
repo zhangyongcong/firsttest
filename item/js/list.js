@@ -2,7 +2,6 @@ require.config({
     paths:{
         "jquery":"jquery-1.10.1.min",
         "jquery-cookie":"jquery.cookie",
-        "jqpaginator.min":"jqpaginator.min",
         "list_data":"list_data",
         "right_block":"right_block"
     },
