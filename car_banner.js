@@ -1,4 +1,4 @@
-define(['jquery','jquery-cookie',"parabola"],function($){
+define(['jquery','jquery-cookie'],function($){
     // 下载数据
     function download(){
         $.ajax({
@@ -25,6 +25,8 @@ define(['jquery','jquery-cookie',"parabola"],function($){
                                 <dd>￥${arr1[j].price}</dd>
                             </dl>
                         `).appendTo(node) 
+
+
                         } 
                     }                    
             },
@@ -107,8 +109,7 @@ define(['jquery','jquery-cookie',"parabola"],function($){
                     // 第一次存储
                     var arr = [{id:id,num:1}];
                     $.cookie("goods",JSON.stringify(arr),{
-                        expires: 7,
-                        path:'/'
+                        expires: 7,();
                     })
                 }else{
                     // 判断是否添加过
@@ -129,96 +130,86 @@ define(['jquery','jquery-cookie',"parabola"],function($){
                     }
     
                     $.cookie('goods',JSON.stringify(cookirStr),{
-                        expires: 7,
-                        path:'/'
+                        expires: 7,();
                     })
-                }
-                if(cookieArr.length){
-                    $.cookie('goods',JSON.stringify(cookieArr),{
-                        expires: 7,
-                        path:'/'
-                    })
-                }else{
-                   $.cookie('goods',null); 
                 }
                 sc_num();
-                sc_msg();
         })
-    
-    
-        //加和减
-        $("main").on("click", ".aside .counts aside i", function(){
-            //商品id
-            var id = $(this).closest(".data").attr("id");
-            // alert(id);
-            //取出对应cookie中的数据
-            var cookieArr = JSON.parse($.cookie("goods"));
-            // alert(JSON.stringify(cookieArr));
-            for(var i = 0; i < cookieArr.length; i++){
-                if(id == cookieArr[i].id){
-                    //要修改的数据
-                    var goodObj = cookieArr[i];
-                    break;
-                }
-            }
-            if(this.innerHTML == "+"){
-                goodObj.num++;
-                // console.log(goodObj.num)
-            }else{
-                if(goodObj.num == 1){
-                    // 当数量小于1时删除
-                    var id = $(this).closest('.data').remove().attr('id');
-                    var cookieArr = JSON.parse($.cookie("goods"));
-                    for(var i = 0; i < cookieArr.length; i++){
-                        if(id == cookieArr[i].id){
-                            cookieArr.splice(i, 1);
-                            break;
-                        }
+        }
+        function add1(){
+            $("main").on("click", ".aside .counts aside i", function(){
+                //商品id
+                var id = $(this).closest(".data").attr("id");
+                // alert(id);
+                //取出对应cookie中的数据
+                var cookieArr = JSON.parse($.cookie("goods"));
+                // alert(JSON.stringify(cookieArr));
+                for(var i = 0; i < cookieArr.length; i++){
+                    if(id == cookieArr[i].id){
+                        //要修改的数据
+                        var goodObj = cookieArr[i];
+                        break;
                     }
-                }else{
-                    goodObj.num--;
                 }
-            }
+                if(this.innerHTML == "+"){
+                    goodObj.num++;
+                    // console.log(goodObj.num)
+                    // 单价
+                    // let price = Number($(this).parent().parent().parent().find('.price').find('i').text());
+                    // alert(price);
+                    // 数目
+                    // let num =Number($(this).parent().parent().parent().find('.counts').find('#num1').html());
+                    // console.log(num)
+                    // let sum = Number($(this).parent().parent().parent().parent().next().find('.right').find('.p1').find('i').text())
+                    // num + 1 => 点击后刷新，num拿到的是点击之前的值
+                    // $(this).parent().parent().parent().parent().next().find('.right').find('.p1').find('i').html((num+1) * price+sum);
+                    // console.log(price)
+                    // console.log($(".p1 i").text())
     
-            //重新显示新的数量
-            $(this).parent().parent().prev().children().text();
-        //    alert( $(this).parent().parent().prev().children().html());
-            $(this).siblings("#num1").html(goodObj.num);
-            // var money = goodObj.num * ($(this).parent().parent().prev().children().text());
-            // $(this).parent().parent().next().children('i').html(money);
-            /* 计算总价 */
-            $(this).parent().parent().next().children('i').html(goodObj.num * ($(this).parent().parent().prev().children().text()));
-
-            // alert($(this).parent().parent().next().children('i').html());
-            $.cookie("goods", JSON.stringify(cookieArr), {
-                expires: 7,
-                path:'/'
-            });
-            sc_num();
+                }else{
+                    if(goodObj.num == 1){
+                        // 当数量小于1时删除
+                        var id = $(this).closest('.data').remove().attr('id');
+                        var cookieArr = JSON.parse($.cookie("goods"));
+                        for(var i = 0; i < cookieArr.length; i++){
+                            if(id == cookieArr[i].id){
+                                cookieArr.splice(i, 1);
+                                break;
+                            }
+                        }
+                    }else{
+                        goodObj.num--;
+                        // 单价
+                    // let price = Number($(this).parent().parent().parent().find('.price').find('i').text());
+                    // alert(price);
+                    // 数目
+                    // let num =Number($(this).parent().parent().parent().find('.counts').find('#num1').html());
+                    // console.log(num)
+                    // num + 1 => 点击后刷新，num拿到的是点击之前的值
+                    // $(this).parent().parent().parent().parent().next().find('.right').find('.p1').find('i').html((num - 1) * price);
+                        // $(this).parent().parent().parent().parent().next().find('.right').find('.p1').find('i').html(0);
+                    }
+                }
     
-        })
-
-
-        // 合计
-        $('main .aside').on("click",".data input",function(){
-            // var id  =  $(this).parent().attr('id');
-            // alert(id);
-            var money = parseInt($(this).parent().find('.money').find('i').html());
-            // alert(money);
-            var num = parseInt($(this).parent().parent().next().find('.right').find('.p1').find('i').html());
-            // alert(num);
-            var isChecked = $(this).prop('checked');
-            if(isChecked == true){
-              var num = num += money;
-              $(this).parent().parent().next().find('.right').find('.p1').find('i').html(num+'.00');
-              $(this).parent().parent().next().find('.right').find('.p2').find('i').html(num+'.00');
-            }else{
-              var num = num -= money;
-              $(this).parent().parent().next().find('.right').find('.p1').find('i').html(num+'.00');
-              $(this).parent().parent().next().find('.right').find('.p2').find('i').html(num+'.00');
-            } 
-        })
-    }
+                //重新显示新的数量
+                $(this).parent().parent().prev().children().text();
+            //    alert( $(this).parent().parent().prev().children().html());
+                $(this).siblings("#num1").html(goodObj.num);
+                // var money = goodObj.num * ($(this).parent().parent().prev().children().text());
+                // $(this).parent().parent().next().children('i').html(money);
+                /* 计算总价 */
+                $(this).parent().parent().next().children('i').html(goodObj.num * ($(this).parent().parent().prev().children().text()));
+    
+                // alert($(this).parent().parent().next().children('i').html());
+                $.cookie("goods", JSON.stringify(cookieArr), {
+                    expires: 7();
+                });
+                sc_num();
+                // sc_msg();
+         Total();
+            })
+           
+        }        //加和减
                 // 统计购物车中的商品数量
                 function sc_num(){
                     var cookieStr = $.cookie("goods");
@@ -234,7 +225,7 @@ define(['jquery','jquery-cookie',"parabola"],function($){
                     }
                 }
                 function sc_msg(){
-                    // $('main .data').empty();//清空所有的子节点
+                    $('main .aside').empty();
                     $.ajax({
                         type:'get',
                         url:'../data/goods.json',
@@ -255,10 +246,16 @@ define(['jquery','jquery-cookie',"parabola"],function($){
                                         }
                                     }
                                 }
-            
+                                $(`
+                                    <div class="right">
+                                        <p class="p1">商品总价：<i>0</i></p>
+                                        <p>优惠节省：<i>0.00</i></p>
+                                        <p class="p2">合计：<i>0</i></p>
+                                    </div>
+                                </div>`).appendTo('main .bottom')
                                 for(var i = 0;i < newArr.length;i++){
                                     $(` <div class="data" id="${newArr[i].id}">
-                                    <input type="checkbox">
+                                    <input type="checkbox" class="check">
                                     <div class="img">
                                         <img src="${newArr[i].img}" alt="">
                                     </div>
@@ -285,18 +282,12 @@ define(['jquery','jquery-cookie',"parabola"],function($){
                                             <a><i>删除</i>/<span>移入收藏夹</span></a>
                                     </div>
                                 </div>`).appendTo('main .aside');
-                                }
-                                $(`<div class="left">
-                                <input type="checkbox">
-                                <span>全选</span>
-                                <a href="">删除选中商品</a>
-                            </div>
-                            <div class="right">
-                                <p class="p1">商品总价：<i>0.00</i></p>
-                                <p>优惠节省：<i>0.00</i></p>
-                                <p class="p2">合计：<i>0.00</i></p>
-                            </div>
-                        </div>`).appendTo('main .bottom')
+                                // console.log($(".p1 i").text());
+                                // let price = parseInt(newArr[i].num * Number($('.data').eq(i).find('.price').text()));
+                                // alert(price)
+                               // $('main .bottom').find('.right').find('.p1').find('i').text(Number($('main .bottom').find('.right').find('.p1').find('i').text())+price);
+                                // console.log(l);
+                            }
                             }
                         },
                         error:function(msg){
@@ -304,29 +295,60 @@ define(['jquery','jquery-cookie',"parabola"],function($){
                         }
                     })
     }
-
-    // 合计
-    /* $('main .aside').on("click",".data input",function(){
+    function Total(){
+      // 合计
+     $('main .aside').on("click",".data input",function(){
         // var id  =  $(this).parent().attr('id');
         // alert(id);
-        var money = parseInt($(this).parent().find('.money').find('i').html());
-        // alert(money);
-        var num = parseInt($(this).parent().parent().next().find('.right').find('.p1').find('i').html());
-        // alert(num);
         var isChecked = $(this).prop('checked');
         if(isChecked == true){
-          var num = num += money;
-          $(this).parent().parent().next().find('.right').find('.p1').find('i').html(num);
+            // $(this).parent().parent().next().find('.right').find('.p1').find('i').html();
+            let price = Number($(this).parent().find('.money').find('i').text());
+            let sum =  Number($(this).parent().parent().next().find('.right').find('.p1').find('i').text())
+            // alert(price);
+           $(this).parent().parent().next().find('.right').find('.p1').find('i').html(price + sum);
         }else{
-          var num = num -= money;
-          $(this).parent().parent().next().find('.right').find('.p1').find('i').html(num);
+            let price = Number($(this).parent().find('.money').find('i').text());
+            let sum =  Number($(this).parent().parent().next().find('.right').find('.p1').find('i').text())
+            // alert(price);
+           $(this).parent().parent().next().find('.right').find('.p1').find('i').html(sum - price);
         }
-        // sc_num();
+        })  
+    }
+     
 
-    }) */
+    // 清空购物车
+    $("#clear").click(function(){
+        var cookieStr = $.cookie('goods');
+        var cookieArr = JSON.parse(cookieStr);
+        $('main .aside').empty();//清空所有的子节点
+        $.cookie("goods", JSON.stringify(cookieArr), {
+            expires: new Date()
+        });
+        // console.log(new Date())
+        sc_num();
+    })
+
+
+    // 登录后显示用户名
+    function login(){
+        var cookirStr = $.cookie("name");
+        // alert(cookirStr)
+    if(cookirStr){
+        $('.login').html('亲爱的用户' + cookirStr + "欢迎登录<a href='' id='close'>【退出】</a>")
+    }
+        $('.login').on('click','#close',function(){
+        $.cookie('name',null);
+        // alert(1)
+        window.location.reload();
+    })  
+    }
     return {
         download:download,
         banner:banner,
-        add:add
+        add:add,
+        add1:add1,
+        Total:Total,
+        login:login
     }
 })
