@@ -450,8 +450,8 @@ main section .right dl {
   background: #fff; }
 
 main section .right dl dt {
-  width: 208px;
-  height: 208px;
+  width: 205px;
+  height: 205px;
   margin-right: 10px;
   float: left; }
 
@@ -466,7 +466,7 @@ main section .right dl dd {
 
 main section .right dl dd h3 {
   font-size: 16px;
-  margin-top: 12px; }
+  margin-top: 15px; }
 
 main section .right dl dd div {
   border: 1px solid red;
@@ -478,7 +478,7 @@ main section .right dl dd div i {
   color: red;
   font-size: 17px;
   float: left;
-  display: block;
+  display: inline-block;
   width: 90px;
   height: 31px;
   line-height: 31px; }
@@ -487,15 +487,15 @@ main section .right dl dd div em {
   width: 67px;
   height: 31px;
   float: left;
-  display: block;
+  display: inline-block;
   font-size: 13px;
   color: #ccc;
-  /* text-decoration:inline; */
+  text-decoration: line-through;
   line-height: 31px; }
 
-main section .right dl dd div a {
-  display: block;
+main section .right dl dd div > .a {
   width: 78px;
+  border: none;
   float: left;
   background: red;
   color: #fff;
@@ -503,13 +503,13 @@ main section .right dl dd div a {
   line-height: 31px;
   text-align: center; }
 
-main section .right dl:nth-of-type(2) {
+main section .right a:nth-of-type(2) dl {
   margin: 0; }
 
-main section .right dl:nth-of-type(3) {
+main section .right a:nth-of-type(3) dl {
   margin-top: 17px; }
 
-main section .right dl:nth-of-type(4) {
+main section .right a:nth-of-type(4) dl {
   margin-top: 17px;
   margin-right: 0; }
 
@@ -593,32 +593,36 @@ main article .right dl dd:nth-of-type(2) {
 main article .right dl dd:nth-of-type(3) {
   color: red; }
 
-main article .right dl:nth-of-type(1) {
+main article .right a:nth-of-type(1) dl {
   border-top: 1px solid #ccc;
   border-bottom: 1px solid #ccc; }
 
-main article .right dl:nth-of-type(2) {
+main article .right a:nth-of-type(2) dl {
   border-top: 1px solid #ccc;
   border-bottom: 1px solid #ccc; }
 
-main article .right dl:nth-of-type(3) {
+main article .right a:nth-of-type(3) dl {
   border-top: 1px solid #ccc;
   border-bottom: 1px solid #ccc; }
 
-main article .right dl:nth-of-type(4) {
+main article .right a:nth-of-type(4) dl {
   border-top: 1px solid #ccc;
   border-bottom: 1px solid #ccc; }
 
-main article .right dl:nth-of-type(5) {
+main article .right a:nth-of-type(5) dl {
+  border-top: 0;
   border-bottom: 1px solid #ccc; }
 
-main article .right dl:nth-of-type(6) {
+main article .right a:nth-of-type(6) dl {
+  border-top: 0;
   border-bottom: 1px solid #ccc; }
 
-main article .right dl:nth-of-type(7) {
+main article .right a:nth-of-type(7) dl {
+  border-top: 0;
   border-bottom: 1px solid #ccc; }
 
-main article .right dl:nth-of-type(8) {
+main article .right a:nth-of-type(8) dl {
+  border-top: 0;
   border-bottom: 1px solid #ccc; }
 
 /* 底部 */

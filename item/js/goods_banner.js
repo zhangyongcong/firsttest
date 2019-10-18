@@ -45,7 +45,7 @@ define(["jquery",'jquery-cookie','parabola'],function($){
                     <div class="bottom">
                         <p>
                             <span>分期付款</span>
-                            <a class="pay"><img src="../images/1.jpg"><em>花呗分期</em>
+                            <a class="pay"><img src="../images/hua.png"><em>花呗分期</em>
                                 <select name="" id="">
                                     <option value="">选择分期</option>
                                     <option value="">3期</option>
@@ -53,7 +53,7 @@ define(["jquery",'jquery-cookie','parabola'],function($){
                                     <option value="">12期</option>
                                 </select> 
                             </a>
-                            <a class="pay"><img src="../images/1.jpg"><em>招商银行</em>
+                            <a class="pay"><img src="../images/bank.png"><em>招商银行</em>
                                 <select name="" id="">
                                     <option value="">选择分期</option>
                                     <option value="">3期</option>
