@@ -205,8 +205,6 @@ define(['jquery','jquery-cookie'],function($){
                     expires: 7
                 });
                 sc_num();
-                // sc_msg();
-         Total();
             })
            
         }        //加和减
@@ -224,6 +222,7 @@ define(['jquery','jquery-cookie'],function($){
                         $('main .aside .count aside span').html(0);
                     }
                 }
+
                 function sc_msg(){
                     $('main .aside').empty();
                     $.ajax({
@@ -323,7 +322,7 @@ define(['jquery','jquery-cookie'],function($){
         var cookieArr = JSON.parse(cookieStr);
         $('main .aside').empty();//清空所有的子节点
         $.cookie("goods", JSON.stringify(cookieArr), {
-            expires: new Date
+            expires: new Date()
         });
         // console.log(new Date())
         sc_num();
