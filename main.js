@@ -12,7 +12,8 @@ require.config({
         "index":"index",
         "right_block":"right_block",
         "parabola":"parabola",
-        "setTimeout":"setTimeout"
+        "setTimeout":"setTimeout",
+        "Seckill":"Seckill"
     },
     shim: {
         //设置依赖关系  先引入jquery.js  然后在隐去jquery-cookie
@@ -49,4 +50,8 @@ require(['right_block'],function(right_block){
 // 倒计时
 require(['setTimeout'],function(setTimeout){
     setTimeout.Start();
+})
+// 秒杀右侧数据
+require(['Seckill'],function(Seckill){
+    Seckill.download();
 })
