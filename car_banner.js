@@ -109,7 +109,7 @@ define(['jquery','jquery-cookie'],function($){
                     // 第一次存储
                     var arr = [{id:id,num:1}];
                     $.cookie("goods",JSON.stringify(arr),{
-                        expires: 7,();
+                        expires: 7,
                     })
                 }else{
                     // 判断是否添加过
@@ -130,7 +130,7 @@ define(['jquery','jquery-cookie'],function($){
                     }
     
                     $.cookie('goods',JSON.stringify(cookirStr),{
-                        expires: 7,();
+                        expires: 7,
                     })
                 }
                 sc_num();
@@ -202,11 +202,9 @@ define(['jquery','jquery-cookie'],function($){
     
                 // alert($(this).parent().parent().next().children('i').html());
                 $.cookie("goods", JSON.stringify(cookieArr), {
-                    expires: 7();
+                    expires: 7
                 });
                 sc_num();
-                // sc_msg();
-         Total();
             })
            
         }        //加和减
@@ -224,6 +222,7 @@ define(['jquery','jquery-cookie'],function($){
                         $('main .aside .count aside span').html(0);
                     }
                 }
+
                 function sc_msg(){
                     $('main .aside').empty();
                     $.ajax({

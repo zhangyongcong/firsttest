@@ -20,31 +20,33 @@ require.config({
     }
 })
 
-/* 遵从AMD规范 */
+// banner图
 require(['banner'],function(banner){
     banner.download();
     banner.banner();
+    banner.sc_num();
+    banner.login();
 })
-
+// 左侧导航
 require(['nav'],function(nav){
     nav.download();
     nav.nav();
 })
-
+// 下方数据
 require(['index_list'],function(index_list){
     index_list.download();
-    // index_list.add();
 })
-
+// 顶部导航
 require(['index'],function(index){
     index.index();
+    index.silde();
 })
-
+// 右侧边栏
 require(['right_block'],function(right_block){
     right_block.download();
     right_block.scroll();
 })
-
+// 倒计时
 require(['setTimeout'],function(setTimeout){
     setTimeout.Start();
 })

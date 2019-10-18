@@ -1,22 +1,16 @@
-/* 
-    遵从AMD规范编写代码
-*/
 
-define(["jquery"],function($){
+define(["jquery",'jquery-cookie'],function($){
+    // banner图数据下载
     function download(){
         $.ajax({
             type:"get",
             url:"../data/banner.json",
             success:function(data){
-                // alert(data);
                 var arr = data;
                 for(var i = 0; i < arr.length; i++){
                     $(`
                             <a href="${arr[i].url}"><img src="${arr[i].img}" alt=""></a>
                         `).appendTo('.banner section')
-                   /*  $(`
-                        <li></li>
-                    `).appendTo('.banner ol') */
                     if(i == 0){
                         $(`
                         <li class = "active"></li>
@@ -84,15 +78,6 @@ define(["jquery"],function($){
             aImgs.hide().css("opacity",0).eq(iNow).show().animate({
                 opacity:1
             },0);
-
-            /* aImgs.animate({
-                top: -406 *iNow
-            },500,function(){
-                if(iNow == aBtns.size()){
-                    
-                    tab();iNow=0;
-                }
-            }) */
             aBtns.removeClass('active').eq(iNow).addClass('active');
         }
 
@@ -121,8 +106,39 @@ define(["jquery"],function($){
             tab();
         })
     }
+    function sc_num(){
+        var cookieStr = $.cookie("goods");
+        if(cookieStr){
+            var cookieArr = JSON.parse(cookieStr);
+            var sum = 0;
+            for(var i = 0; i < cookieArr.length;i++){
+                sum += cookieArr[i].num;
+            }
+            $('.head header .p a span').html(sum);
+        }else{
+            $('.head header .p a span').html(0);
+        }
+    }
+
+    // 登录后显示用户名
+        function login(){
+            var cookirStr = $.cookie("name");
+            // alert(cookirStr)
+        if(cookirStr){
+            $('.login').html('亲爱的用户' + cookirStr + "欢迎登录")
+            $('.register').html("<a href='' id='close'>【退出】</a>")
+        }
+            $('.register').on('click','#close',function(){
+                // alert(1)
+            $.cookie('name',null);
+            window.location.reload();
+        })  
+        }
+
     return {
         download:download,
         banner:banner,
+        sc_num:sc_num,
+        login:login
     }
 })

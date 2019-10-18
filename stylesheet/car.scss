@@ -27,6 +27,9 @@ header{
         }
     }
 }
+#close{
+    margin-top:0;
+}
 .nav{
     width:1200px;
     height:90px;
@@ -178,8 +181,13 @@ main{
         span{
             padding:0px 5px;
         }
-        >a{
+        >button{
             margin-left:10px;
+            width:100px;
+            height:30px;
+            border:none;
+            background:orangered;
+            border-radius: 5px;
         }
     }
     .right{

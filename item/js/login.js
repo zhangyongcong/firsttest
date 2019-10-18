@@ -80,7 +80,7 @@
                    });
                    $('.alert').html(obj.message);
                }else{
-                   location.href = "http://localhost:8888/html/index.html";
+                   location.href = "http://localhost:2829/html/index.html";
                    setCookie();
                    
                }
@@ -117,7 +117,7 @@
                     });
                     $('.alert').html(obj.message);
                 }else{
-                    location.href = "http://localhost:8888/html/index.html";
+                    location.href = "http://localhost:2829/html/index.html";
                     setCookie()
                 }
                 $('.alert').css({

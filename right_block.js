@@ -1,10 +1,10 @@
 define(['jquery'],function($){
     function download(){
+        // 右侧导航栏
         $.ajax({
             type:"get",
             url:"../data/right_block.json",
             success:function(data){
-                // alert(data);
                 var arr = data;
                 for(var i = 0; i < arr.length; i++){
                     $(`
