@@ -2,11 +2,9 @@
 const gulp = require('gulp');
 const connect = require("gulp-connect");
 const scss = require("gulp-sass");
-const minifyCSS = require("gulp-minify-css");
-const rename = require("gulp-rename");
 gulp.task('copy-html',function(){
     return gulp.src("*.html")
-    .pipe(gulp.dest('item'))
+    .pipe(gulp.dest('item/html'))
     .pipe(connect.reload());
 })
 
@@ -73,14 +71,14 @@ gulp.task("watch", function(){
     gulp.watch(["*.json", "!package.json"], ['data']);
 
 })
-
+// 服务
 gulp.task("server", function(){
     connect.server({
         root: "item",
-        port: 8888,
+        port: 2829,
         livereload: true
     })
 })
-
+// 默认任务，执行监听和服务
 gulp.task("default", ['watch', 'server']);
 

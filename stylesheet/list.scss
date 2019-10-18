@@ -1,0 +1,376 @@
+body{
+    min-width: 1310px;
+    _width:1310px;
+}
+#ball{
+    width:30px;
+    height:30px;
+    background: black;
+    position: absolute;
+    border-radius: 50%;
+    display: none;
+    z-index: 6;
+}
+.container{
+    margin:0 auto;
+    width:1310px;
+    position: relative;
+}
+.right_lan>dl:last-child{
+    height:20px;
+    padding:0;
+    text-align: center;
+    line-height: 15px;
+}
+.right_lan>dl:last-child dd{
+    height:0;
+}
+.right_lan>dl:last-child dt{
+    width:50px;
+    height:20px;
+    background:#666;
+    .iconfont{
+        font-size:30px;
+        color:#fff;
+    }
+}
+.right_lan>dl:last-child:hover{
+    cursor: pointer;
+}
+.right_lan>dl:last-child dt .iconfont:hover{
+    color:#fff;
+}
+.right_lan{
+    position: fixed;
+    top:30%;
+    right: 0;
+    z-index: 5;
+    border:1px solid #666;
+    border-bottom: none;
+    display: none;
+ dl{
+    width:50px;
+    height:43px;
+    padding-top:6px;
+    text-align: center; 
+    border-bottom:1px solid #666;
+    background: #fff;
+    dt .iconfont{
+        font-size:18px;
+        &:hover{
+            color: red;
+        }
+    }
+    &:hover{
+        cursor: pointer;
+        color: red;
+    }
+    dd{
+        font-size:12px;
+    }
+}
+}
+.head_nav1{
+    position: fixed;
+    top:0;
+    width:70px;
+    height: 70px;
+    z-index: 6;
+}
+.head{
+    height: 50px;
+    width:1310px;
+
+.head_nav{/* 图标 */
+    width:50px;
+    height:50px;
+    float: left;
+    position: relative;
+
+img{
+    width:100%;
+    height: 100%;
+}
+}
+header{/* 头部导航 */
+    width:1260px;
+    height:50px;
+    float: left;
+ul li{
+    height: 50px;
+    line-height: 50px;  
+    margin-right: 22px;
+    float: left;
+}
+}
+}
+.head header>ul li:nth-of-type(1){
+    margin-left:5px;
+}
+.head header>ul li>a{
+    color: #ccc;
+    margin-top:15px;
+    font-size: 14px;
+}
+/* 登录注册 */
+.head header>p{
+    float:right;
+    font-size:14px;
+    height:40px;
+    padding-top:10px;
+}
+.head header>p>a{
+    display: block;
+    height:20px;
+    float: left;
+    padding:0 10px;
+    .iconfont{
+        margin:0px 5px;
+    }
+    span{
+        padding: 0px 3px;
+        color:red;
+    }
+}
+.menu{
+    margin:0 auto;
+    background:#fff;
+    position: absolute;
+    z-index: 4;
+    left:0;
+    line-height: 14px;
+}
+.menu .center{
+    padding:10px 55px;
+    height:270px;
+    width:1200px;
+    margin:0 auto;
+    display: none;
+}
+.menu .center dl{
+    float: left;
+    height:270px;
+    width:239px;
+}
+.menu .center dl dt{
+    width:164px;
+    height:164px;
+    margin:12px auto;
+}
+.menu .center dl dt img{
+    width:100%;
+    height:100%;
+}
+.menu .center dl dd{
+    font-size: 14px;
+    margin-top:5px;
+    text-align: center;
+}
+.menu .center dl dd:nth-of-type(2){
+    color:#ccc;
+}
+.menu .center dl dd:nth-of-type(3){
+    color:red;
+}
+.head header>p>a:nth-of-type(1){
+    border-right:1px solid #ccc;
+}
+/* 导航 */
+.nav{
+    width:1310px;
+    margin:0 auto;
+    height:70px;
+    background:#999;
+    position: relative;
+}
+.nav1{
+    width:1280px;
+    position: fixed;
+    top:0;
+    z-index: 5;
+    padding-left: 30px;
+}
+.nav>ol{
+    height:70px;
+    width:1240px;
+    font-size: 17px;
+    line-height: 70px;
+    padding-left:70px;
+}
+.nav>ol li{
+    float:left;
+    margin-right:45px;
+}
+/* 中间 */
+main{
+    width:1310px;
+    margin:0 auto;
+    background:#f0f0f0;
+    article{
+        width:1200px;
+        height:755px;
+        // background:#666;
+        margin:0 auto;
+        .top h2{
+            height:40px;
+            line-height: 50px;
+            width:1190px;
+            font-size: 22px;
+            padding-left: 10px;
+        }
+        .right dl{
+            text-align: center;
+            float: left;
+            background:#fff;
+            width:192px;
+            height:324px;
+            padding:0px 43px;
+            margin:10px;
+            // background: #fff;
+            border:1px solid #ccc;
+            dt{
+                width:192px;
+                height:192px;
+                img{
+                    width:100%;
+                    height:100%;
+                }
+            }
+            >dd{
+                width:192px;
+                height:14px;
+                margin-top:20px;
+                text-align: center;
+                font-size: 14px;
+                line-height: 14px;
+            }
+            dd:nth-of-type(2){
+                color:red;
+            }
+        }
+        button{
+            height:30px;
+            border:none;
+            background:orangered;
+            margin:15px 0px;
+            color:#fff;
+            border-radius: 5px;
+        }
+    }
+}
+
+/* 底部 */
+footer{
+    height:42px;
+}
+footer .top{
+    width:1310px;
+    height: 199px;
+    // background:red;
+}
+footer .top img{
+    width:100%;
+    height:100%;
+}
+footer .bottom{
+    padding:44px 0px 0px 100px;
+    height:145px;
+    background: #f5f5f5;
+}
+footer .bottom ul{
+    width:150px;
+    height: 145px;
+    float: left;
+}
+footer .bottom ul h2{
+    font-size:16px;
+    margin-bottom: 5px;
+}
+footer .bottom ul li a{
+    font-size: 12px;
+    color:#666;
+}
+footer .bottom .right{
+    width:230px;
+    height:90px;
+    margin-left:10px;
+    padding-left:68px;
+    border-left:1px solid #666;
+    float: left;
+}
+footer .bottom .right h3{
+    font-size:20px;
+    color:red;
+}
+footer .bottom .right em{
+    display: block;
+    font-size:12px;
+    color:#666;
+}
+footer .bottom .right div{
+   width:136px;
+   height:34px;
+   border:1px solid #666;
+   text-align: center;
+   line-height: 34px;
+}
+footer .bottom .right div .iconfont{
+    font-size: 20px;
+    color:#666;
+}
+footer .bottom .right div span{
+    font-size:20px;
+    color:#666;
+}
+footer .foot{
+    width:1310px;
+    height:46px;
+    background:#757575;
+}
+footer .foot ul{
+    float: left;
+    height:46px;
+    width:600px;
+}
+footer .foot ul li{
+    float: left;
+    color:#ccc;
+    font-size:12px;
+    margin-top:10px;
+}
+footer .foot ul li:nth-of-type(1){
+    padding-right: 5px;
+}
+footer .foot ul li a{
+    display: block;
+    height:22px;
+    border-left:1px solid #ccc;
+    color:#ccc;
+    padding:0px 5px;
+}
+footer .foot ol{
+    float: left;
+    width:710px;
+    height:46px;
+}
+footer .foot ol li{
+    float: left;
+    color:#ccc;
+    font-size: 12px;
+    margin-top: 10px;
+}
+footer .foot ol li a{
+    display: block;
+    height:22px;
+    color:#ccc;
+    padding:0px 5px;
+}
+footer .foot ol li:nth-of-type(1) a{
+    border-right:1px solid #ccc;
+}
+footer .foot ol li:nth-of-type(3) a{
+    border-left:1px solid #ccc;
+}     
+footer .foot ol li:nth-of-type(2){
+    padding:0px 5px;
+}

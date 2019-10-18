@@ -13,7 +13,7 @@ define(['jquery'],function($){
                     <div class="top">
                         <h2>${arr[i].name}</h2>
                         <ul>
-                <li><a href="http://localhost:8888/html/list.html">${arr[i].list5}<i class="iconfont">&#xe84f;</i></a></li>
+                <li><a href="http://localhost:2829/html/list.html">${arr[i].list5}<i class="iconfont">&#xe84f;</i></a></li>
                             <li><a href="">${arr[i].list4}</a></li>
                             <li><a href="">${arr[i].list3}</a></li>
                             <li><a href="">${arr[i].list2}</a></li>
@@ -30,7 +30,7 @@ define(['jquery'],function($){
                         var arr1 = arr[i].rightArr;
                         for(let j = 0; j < arr1.length;j++){
                             $(`
-                            <a href="http://localhost:8888/html/goods.html?id=${arr1[j].id}">
+                            <a href="http://localhost:2829/html/goods.html?id=${arr1[j].id}">
                             <dl id='${arr1[j].id}'>
                                 <dt>
                                     <img src="${arr1[j].img}" alt="">
