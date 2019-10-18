@@ -80,7 +80,7 @@
                    });
                    $('.alert').html(obj.message);
                }else{
-                   location.href = "http://localhost:8888";
+                   location.href = "http://localhost:8888/html/index.html";
                    setCookie();
                    
                }
@@ -117,7 +117,7 @@
                     });
                     $('.alert').html(obj.message);
                 }else{
-                    location.href = "http://localhost:8888";
+                    location.href = "http://localhost:8888/html/index.html";
                     setCookie()
                 }
                 $('.alert').css({
@@ -133,7 +133,8 @@
     function setCookie(){
         var username = $('#input1').val();
            $.cookie("name",username,{
-                path:'/'
+               expires:7,
+                path:'/html'
             })
         }
 });

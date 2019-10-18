@@ -4,7 +4,8 @@ require.config({
         "jquery":"jquery-1.10.1.min",
         "jquery-cookie":"jquery.cookie",
         "goods_banner":"goods_banner",
-        "drag":"drag"
+        "drag":"drag",
+        "banner":"banner"
     },
     shim: {
         //设置依赖关系  先引入jquery.js  然后在隐去jquery-cookie
@@ -32,4 +33,8 @@ require(['drag'],function(drag){
 require(['index'],function(index){
     index.index();
     index.silde();
+})
+// 登录后显示用户名
+require(['banner'],function(banner){
+    banner.login();
 })

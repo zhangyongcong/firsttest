@@ -121,9 +121,6 @@ define(["jquery",'jquery-cookie'],function($){
     }
 
     // 登录后显示用户名
-        
-    
-        
         function login(){
             var cookirStr = $.cookie("name");
             // alert(cookirStr)
@@ -132,6 +129,7 @@ define(["jquery",'jquery-cookie'],function($){
             $('.register').html("<a href='' id='close'>【退出】</a>")
         }
             $('.register').on('click','#close',function(){
+                // alert(1)
             $.cookie('name',null);
             window.location.reload();
         })  

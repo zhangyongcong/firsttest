@@ -18,4 +18,5 @@ require(['car_banner'],function(car_banner){
     car_banner.add();
     car_banner.add1();
     car_banner.Total();
+    car_banner.login();
 })

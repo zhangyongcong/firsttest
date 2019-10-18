@@ -110,7 +110,6 @@ define(['jquery','jquery-cookie'],function($){
                     var arr = [{id:id,num:1}];
                     $.cookie("goods",JSON.stringify(arr),{
                         expires: 7,
-                        path:'/'
                     })
                 }else{
                     // 判断是否添加过
@@ -132,7 +131,6 @@ define(['jquery','jquery-cookie'],function($){
     
                     $.cookie('goods',JSON.stringify(cookirStr),{
                         expires: 7,
-                        path:'/'
                     })
                 }
                 sc_num();
@@ -204,8 +202,7 @@ define(['jquery','jquery-cookie'],function($){
     
                 // alert($(this).parent().parent().next().children('i').html());
                 $.cookie("goods", JSON.stringify(cookieArr), {
-                    expires: 7,
-                    path:'/'
+                    expires: 7
                 });
                 sc_num();
                 // sc_msg();
@@ -326,17 +323,32 @@ define(['jquery','jquery-cookie'],function($){
         var cookieArr = JSON.parse(cookieStr);
         $('main .aside').empty();//清空所有的子节点
         $.cookie("goods", JSON.stringify(cookieArr), {
-            expires: new Date(),
-            path:'/'
+            expires: new Date
         });
         // console.log(new Date())
         sc_num();
     })
+
+
+    // 登录后显示用户名
+    function login(){
+        var cookirStr = $.cookie("name");
+        // alert(cookirStr)
+    if(cookirStr){
+        $('.login').html('亲爱的用户' + cookirStr + "欢迎登录<a href='' id='close'>【退出】</a>")
+    }
+        $('.login').on('click','#close',function(){
+        $.cookie('name',null);
+        // alert(1)
+        window.location.reload();
+    })  
+    }
     return {
         download:download,
         banner:banner,
         add:add,
         add1:add1,
-        Total:Total
+        Total:Total,
+        login:login
     }
 })
